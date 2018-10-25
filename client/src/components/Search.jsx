@@ -12,13 +12,9 @@ export default class Search extends React.Component {
 
   render() {
     return (
-      <div>
-        <span>
-          <h2>
-            {this.state.totalReviews} Reviews <StarsModel rating={this.state.avgStars} dimensions='25px' />
-            <input type="text" placeholder="Search reviews" style={{ "float": "right", "alignItems": "center" }}></input>
-          </h2>
-        </span>
+      <div style={{ "display": "block", "width": "100%", "paddingTop": "10px", "paddingBottom": "10px" }}>
+        <div className="totalReviewsDiv"><h2>{this.state.totalReviews} Reviews<StarsModel rating={this.state.avgStars} dimensions='25px' /></h2></div>
+        <div className="searchBarDiv"><input className="searchBar" type="search" placeholder="Search reviews"></input></div>
       </div>
     )
   }

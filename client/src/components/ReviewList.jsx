@@ -10,7 +10,7 @@ export default class ReviewList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ "display": "block", "width": "100%", "paddingTop": "10px", "paddingBottom": "10px" }}>
         <ReviewItem />
       </div>
     )

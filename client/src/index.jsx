@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Search from './components/Search.jsx';
 import Stars from './components/Stars.jsx';
 import ReviewList from './components/ReviewList.jsx';
+// import style from './components/style.jsx';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -15,13 +16,9 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <hr />
         <Search />
-        <hr />
         <Stars />
-        <hr />
         <ReviewList />
-        <hr />
       </div>
     )
   }
