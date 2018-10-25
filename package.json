@@ -28,7 +28,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "bookshelf": "^0.13.3",
     "express": "^4.16.4",
+    "knex": "^0.15.2",
     "mysql": "^2.16.0",
     "nodemon": "^1.18.4",
     "path": "^0.12.7",
