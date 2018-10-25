@@ -1,11 +1,13 @@
 const express = require('express');
-const config = require('../config.js');
 const bodyParser = require('body-parser');
+const { port } = require('../config.js');
+const router = require('./router.js');
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
-let port = config.port;
-app.listen(port, () => {console.log(`Listening on port ${port}`)})
+app.use('/', router);
+
+app.listen(port, () => { console.log(`Listening on port ${port}`); });

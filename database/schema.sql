@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS staybnb;
 CREATE DATABASE staybnb;
 USE staybnb;
 
