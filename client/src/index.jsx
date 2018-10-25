@@ -15,9 +15,13 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
+        <hr />
         <Search />
+        <hr />
         <Stars />
+        <hr />
         <ReviewList />
+        <hr />
       </div>
     )
   }
