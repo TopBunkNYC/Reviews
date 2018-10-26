@@ -31,6 +31,7 @@ CREATE TABLE Reviews (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `bookings_id` INTEGER NOT NULL,
   `review_date` DATE,
+  `review` VARCHAR(600),
   `accuracy` TINYINT CHECK (`accuracy` < 6),
   `communication` TINYINT,
   `cleanliness` TINYINT,

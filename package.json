@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server-dev": "nodemon server/index.js",
-    "react-dev": "webpack -d --watch"
+    "react-dev": "webpack -d --watch",
+    "seed": "mysql -u root -p < database/schema.sql && mysql -u root -p < database/data.sql"
   },
   "repository": {
     "type": "git",

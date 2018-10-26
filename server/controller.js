@@ -1,4 +1,4 @@
-const { getAll, search } = require('./model.js')
+const { getAll, search } = require('./model.js');
 
 module.exports = {
   getAll: (req, res) => {
@@ -11,5 +11,5 @@ module.exports = {
     search(req.query, (response) => {
       res.send(response);
     });
-  }
-}
+  },
+};

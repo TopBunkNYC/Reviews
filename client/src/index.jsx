@@ -10,23 +10,27 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reviews: []
+      reviews: [],
+      search: []
     }
+    this.getAllReviews = this.getAllReviews.bind(this);
     this.searchReviews = this.searchReviews.bind(this);
   }
 
   componentDidMount() {
-    // Need to get all reviews from the database in chronological order
-    // console.log('componentDidMount')
+    this.getAllReviews();
+  }
+
+  getAllReviews() {
     axios.get('/reviews')
-      .then((result) => {
-        this.setState({
-          reviews: result.data
-        });
-      })
-      .catch((error) => {
-        console.error(error);
-      })
+    .then((result) => {
+      this.setState({
+        reviews: result.data
+      });
+    })
+    .catch((error) => {
+      console.error(error);
+    })
   }
 
   searchReviews(query) {
