@@ -1,11 +1,19 @@
 const express = require('express');
-const config = require('../config.js');
 const bodyParser = require('body-parser');
+const path = require('path');
+
+const db = require('../database/index.js');
+const router = require('./router.js');
 
 const app = express();
+const source = path.join(__dirname, '/../client/dist');
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/../client/dist'));
+app.use(express.static(source));
 
-let port = config.port;
-app.listen(port, () => {console.log(`Listening on port ${port}`)})
+app.use('/', router);
+
+let port = 7000;
+app.listen(port, () => { console.log(`Listening on port ${port}`); });
+
+module.exports.app = app;
