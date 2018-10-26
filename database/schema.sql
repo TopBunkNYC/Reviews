@@ -1,5 +1,3 @@
-DROP DATABASE staybnb;
-
 CREATE DATABASE staybnb;
 USE staybnb;
 
