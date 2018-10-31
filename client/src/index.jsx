@@ -93,7 +93,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Search searchReviews={this.searchReviews} ratings={this.state.ratings}/>
+        <Search searchReviews={this.searchReviews} ratings={this.state.ratings} reviews={this.state.reviews}/>
         <Stars ratings={this.state.ratings}/>
         <ReviewList reviews={this.state.showSearch ? this.state.search : this.state.reviews}/>
       </div>

@@ -7,16 +7,22 @@ export default class Search extends React.Component {
     this.state = {
       query: '',
       starsLoaded: false,
-      avgRating: 0
+      avgRating: 0,
+      ratingsLoaded: false,
+      totalRatings: 0
     }
     this.searchQuery = this.searchQuery.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.starsLoaded = this.starsLoaded.bind(this);
+    this.reviewsLoaded = this.reviewsLoaded.bind(this);
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.ratings !== prevProps.ratings) {
       this.starsLoaded(this.props.ratings);
+    }
+    if (this.props.reviews !== prevProps.reviews) {
+      this.reviewsLoaded(this.props.reviews);
     }
   }
 
@@ -29,6 +35,13 @@ export default class Search extends React.Component {
     this.setState({
       starsLoaded: true,
       avgRating: avg
+    });
+  }
+
+  reviewsLoaded(reviews) {
+    this.setState({
+      ratingsLoaded: true,
+      totalRatings: reviews.length
     });
   }
 
@@ -49,7 +62,7 @@ export default class Search extends React.Component {
     return (
       <div style={{ "display": "block", "width": "100%", "paddingTop": "10px", "paddingBottom": "10px" }}>
         <div className="totalReviewsDiv">
-          <h2>100 Reviews<StarsModel rating={this.state.starsLoaded ? this.state.avgRating : 0} dimensions='25px' /></h2>
+          <h2>{this.state.ratingsLoaded ? this.state.totalRatings : 0} Reviews<StarsModel rating={this.state.starsLoaded ? this.state.avgRating : 0} dimensions='25px' /></h2>
         </div>
         <div className="searchBarDiv">
             <input
