@@ -4,6 +4,30 @@ export default class ReviewItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      truncate: false,
+      shortText: this.props.review.review.substring(0, 280) + ' ... show more',
+      reviewText: this.props.review.review
+    }
+    this.clickHandler = this.clickHandler.bind(this);
+  }
+
+  componentDidMount() {
+    if (this.props.review.review.length > 280) {
+      this.setState({
+        truncate: true
+      });
+    }
+  }
+
+  clickHandler() {
+    if (this.state.truncate === true) {
+      this.setState({
+        truncate: false
+      });
+    } else {
+      this.setState({
+        truncate: true
+      });
     }
   }
 
@@ -16,13 +40,14 @@ export default class ReviewItem extends React.Component {
           </span>
           <span style={{ "float": "center", "width": "60%" }}>
             {this.props.review.display_name} <br />
-            {this.props.review.review_date}
+            {this.props.review.review_date.substring(0, 10)}
           </span>
           <span style={{ "float": "right", "width": "10%" }}>
-            <a href="/report"><img src="/images/flagReview.png" style={{"width": "15px", "height": "15px"}}/></a>
+            <a href="/report"><img src="/images/flagReview.png" style={{"width": "15px", "height": "15px", "borderRadius": "50%"}}/></a>
           </span>
         </div>
-        <div style={{"width": "100%" }}>{this.props.review.review}</div>
+        {/* <div style={{ "width": "100%" }}>{this.props.review.review}</div> */}
+        <div style={{ "width": "100%" }} onClick={this.clickHandler}>{this.state.truncate ? this.state.shortText : this.state.reviewText}</div>
       </div>
     )
   }
