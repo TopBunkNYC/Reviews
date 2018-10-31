@@ -13,7 +13,6 @@ app.use(express.static(source));
 
 app.use('/', router);
 
-let port = 7000;
-app.listen(port, () => { console.log(`Listening on port ${port}`); });
+app.listen(7000, () => { console.log('Listening on port 7000'); });
 
 module.exports.app = app;

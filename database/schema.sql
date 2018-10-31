@@ -3,41 +3,41 @@ CREATE DATABASE staybnb;
 USE staybnb;
 
 CREATE TABLE Listings (
-  `id` INTEGER NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`)
+  `l_id` INTEGER NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`l_id`)
 );
 
 CREATE TABLE Users (
-  `id` INTEGER NOT NULL AUTO_INCREMENT,
+  `u_id` INTEGER NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(50),
   `display_name` VARCHAR(50),
   `photo_url` VARCHAR(200),
   `profile_url` VARCHAR(200),
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`u_id`)
 );
 
 CREATE TABLE Bookings (
-  `id` INTEGER NOT NULL AUTO_INCREMENT,
+  `b_id` INTEGER NOT NULL AUTO_INCREMENT,
   `listings_id` INTEGER NOT NULL,
   `users_id` INTEGER NOT NULL,
   `stay_start` DATE,
   `stay_end` DATE,
-  PRIMARY KEY (`id`),
-  FOREIGN KEY (`listings_id`) REFERENCES Listings(`id`),
-  FOREIGN KEY (`users_id`) REFERENCES Users(`id`)
+  PRIMARY KEY (`b_id`),
+  FOREIGN KEY (`listings_id`) REFERENCES Listings(`l_id`),
+  FOREIGN KEY (`users_id`) REFERENCES Users(`u_id`)
 );
 
 CREATE TABLE Reviews (
-  `id` INTEGER NOT NULL AUTO_INCREMENT,
+  `r_id` INTEGER NOT NULL AUTO_INCREMENT,
   `bookings_id` INTEGER NOT NULL,
   `review_date` DATE,
-  `review` VARCHAR(600),
-  `accuracy` TINYINT CHECK (`accuracy` < 6),
+  `review` VARCHAR(5000),
+  `accuracy` TINYINT CHECK,
   `communication` TINYINT,
   `cleanliness` TINYINT,
   `location` TINYINT,
   `check-in` TINYINT,
   `value` TINYINT,
-  PRIMARY KEY (`id`),
-  FOREIGN KEY (`bookings_id`) REFERENCES Bookings(`id`)
+  PRIMARY KEY (`r_id`),
+  FOREIGN KEY (`bookings_id`) REFERENCES Bookings(`b_id`)
 );

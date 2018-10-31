@@ -11,48 +11,94 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       reviews: [],
-      search: []
+      search: [],
+      ratings: [],
+      showSearch: false
     }
     this.getAllReviews = this.getAllReviews.bind(this);
     this.searchReviews = this.searchReviews.bind(this);
+    this.getRatings = this.getRatings.bind(this);
   }
 
   componentDidMount() {
     this.getAllReviews();
+    this.getRatings();
   }
 
   getAllReviews() {
-    axios.get('/reviews')
+    let queryString = window.location.search;
+    let listingID = (queryString.slice(-3) * 1);
+    let params = {
+      params: {
+        id: listingID
+      }
+    };
+
+    axios.get('/reviews', params)
     .then((result) => {
       this.setState({
         reviews: result.data
       });
-    })
+    }) 
     .catch((error) => {
       console.error(error);
     })
   }
 
   searchReviews(query) {
-    // console.log('searchReviews query is: ' + query)
-    axios.get('/search', { params: { query: query } })
+    let queryString = window.location.search;
+    let listingID = (queryString.slice(-3) * 1);
+    let params = {
+      params: {
+        id: listingID,
+        query: `%${query}%`
+      }
+    };
+
+    axios.get('/search', params)
       .then((result) => {
-        console.log('searchReviews result is: ' + result);
+        this.setState({
+          search: result.data,
+          showSearch: true
+        });
       })
       .catch((error) => {
         console.error(error);
       })
   }
 
+  getRatings() {
+    let queryString = window.location.search;
+    let listingID = (queryString.slice(-3) * 1);
+    let params = {
+      params: {
+        id: listingID,
+      }
+    };
+
+    axios.get('/ratings', params)
+    .then((result) => {
+      console.log(result.data);
+      if (result.data[0].accuracy !== null) {
+        this.setState({
+          ratings: result.data
+        });
+      }
+    }) 
+    .catch((error) => {
+      console.error(error);
+    })
+  }
+
   render() {
     return (
       <div>
-        <Search searchReviews={this.searchReviews}/>
-        <Stars />
-        <ReviewList />
+        <Search searchReviews={this.searchReviews} ratings={this.state.ratings}/>
+        <Stars ratings={this.state.ratings}/>
+        <ReviewList reviews={this.state.showSearch ? this.state.search : this.state.reviews}/>
       </div>
     )
   }
-}
+};
 
 ReactDOM.render(<App/>, document.getElementById('app'));
