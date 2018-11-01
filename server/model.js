@@ -3,13 +3,13 @@ const db = require('../database/index.js');
 module.exports = {
   getAllReviews: (listingID, callback) => {
     const SQLquery = `SELECT *
-    FROM reviews
-    INNER JOIN bookings
-    ON reviews.bookings_id = bookings.b_id
-    LEFT JOIN users
-    ON bookings.users_id = users.u_id
-    WHERE bookings.listings_id = ${listingID}
-    ORDER BY reviews.review_date DESC;`;
+    FROM Reviews
+    INNER JOIN Bookings
+    ON Reviews.bookings_id = Bookings.b_id
+    LEFT JOIN Users
+    ON Bookings.users_id = Users.u_id
+    WHERE Bookings.listings_id = ${listingID}
+    ORDER BY Reviews.review_date DESC;`;
     db.query(SQLquery, (error, response) => {
       if (error) {
         console.error(error);
