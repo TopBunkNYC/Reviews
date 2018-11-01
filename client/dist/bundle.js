@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./client/src/index.jsx");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./client/src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -143,6 +143,18 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 "use strict";
 eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRatingsDeclarative = __webpack_require__(/*! react-ratings-declarative */ \"./node_modules/react-ratings-declarative/build/index.js\");\n\nvar _reactRatingsDeclarative2 = _interopRequireDefault(_reactRatingsDeclarative);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar starsModel = function starsModel(props) {\n  return _react2.default.createElement(\n    _reactRatingsDeclarative2.default,\n    { rating: props.rating, widgetDimensions: props.dimensions, widgetSpacings: '5px' },\n    _react2.default.createElement(_reactRatingsDeclarative2.default.Widget, { widgetRatedColor: '#008489' }),\n    _react2.default.createElement(_reactRatingsDeclarative2.default.Widget, { widgetRatedColor: '#008489' }),\n    _react2.default.createElement(_reactRatingsDeclarative2.default.Widget, { widgetRatedColor: '#008489' }),\n    _react2.default.createElement(_reactRatingsDeclarative2.default.Widget, { widgetRatedColor: '#008489' }),\n    _react2.default.createElement(_reactRatingsDeclarative2.default.Widget, { widgetRatedColor: '#008489' })\n  );\n};\n\nmodule.exports = starsModel;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2NvbXBvbmVudHMvU3RhcnNNb2RlbC5qc3guanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vY2xpZW50L3NyYy9jb21wb25lbnRzL1N0YXJzTW9kZWwuanN4P2E0NzgiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBSYXRpbmdzIGZyb20gJ3JlYWN0LXJhdGluZ3MtZGVjbGFyYXRpdmUnO1xuXG5jb25zdCBzdGFyc01vZGVsID0gKHByb3BzKSA9PiB7XG4gIHJldHVybiAoXG4gICAgPFJhdGluZ3MgcmF0aW5nPXtwcm9wcy5yYXRpbmd9IHdpZGdldERpbWVuc2lvbnM9e3Byb3BzLmRpbWVuc2lvbnN9IHdpZGdldFNwYWNpbmdzPVwiNXB4XCI+XG4gICAgICA8UmF0aW5ncy5XaWRnZXQgd2lkZ2V0UmF0ZWRDb2xvcj1cIiMwMDg0ODlcIi8+XG4gICAgICA8UmF0aW5ncy5XaWRnZXQgd2lkZ2V0UmF0ZWRDb2xvcj1cIiMwMDg0ODlcIi8+XG4gICAgICA8UmF0aW5ncy5XaWRnZXQgd2lkZ2V0UmF0ZWRDb2xvcj1cIiMwMDg0ODlcIi8+XG4gICAgICA8UmF0aW5ncy5XaWRnZXQgd2lkZ2V0UmF0ZWRDb2xvcj1cIiMwMDg0ODlcIi8+XG4gICAgICA8UmF0aW5ncy5XaWRnZXQgd2lkZ2V0UmF0ZWRDb2xvcj1cIiMwMDg0ODlcIi8+XG4gICAgPC9SYXRpbmdzPlxuICApXG59O1xuXG5tb2R1bGUuZXhwb3J0cyA9IHN0YXJzTW9kZWw7Il0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7OztBQUFBO0FBQ0E7Ozs7O0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBTEE7QUFRQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./client/src/components/StarsModel.jsx\n");
+
+/***/ }),
+
+/***/ "./client/src/index.js":
+/*!*****************************!*\
+  !*** ./client/src/index.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar _index = __webpack_require__(/*! ./index.jsx */ \"./client/src/index.jsx\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nwindow.Reviews = _index2.default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2NsaWVudC9zcmMvaW5kZXguanM/OTFjYyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQXBwIGZyb20gJy4vaW5kZXguanN4Jztcblxud2luZG93LlJldmlld3MgPSBBcHA7Il0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7Ozs7O0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./client/src/index.js\n");
 
 /***/ }),
 
