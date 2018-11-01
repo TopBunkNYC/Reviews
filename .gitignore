@@ -1,5 +1,17 @@
+## MAC files ##
+.DS_Store
+
+## API Key ##
+config.js
+
+## NPM ##
+npm
+npm-debug.log
 node_modules
+
+## Others ##
 client/dist/bundle.js
 config.js
 Notes
 .eslintrc.js
+meow.pem
