@@ -1,0 +1,60 @@
+INSERT INTO Bookings VALUES (
+  1, 
+  (SELECT id FROM Listings WHERE id = 1), 
+  (SELECT id FROM Users WHERE id = 1), 
+  '20120101', 
+  '20120101'
+);
+
+INSERT INTO Reviews VALUES (
+  1,
+  (SELECT id FROM Bookings WHERE id = 1),
+  '20120101',
+  5,
+  4,
+  3,
+  2,
+  1,
+  2
+);
+
+SELECT *
+FROM reviews
+INNER JOIN bookings
+ON reviews.bookings_id = bookings.b_id
+LEFT JOIN users
+ON bookings.users_id = users.u_id
+WHERE bookings.listings_id = 25;
+
+SELECT *
+FROM reviews
+INNER JOIN bookings
+ON reviews.bookings_id = bookings.b_id
+LEFT JOIN users
+ON bookings.users_id = users.u_id
+WHERE bookings.listings_id = ${listingID}
+AND reviews.review LIKE "%${query}%"
+ORDER BY reviews.review_date DESC;
+
+SELECT *
+FROM reviews
+INNER JOIN bookings
+ON reviews.bookings_id = bookings.b_id
+LEFT JOIN users
+ON bookings.users_id = users.u_id
+WHERE bookings.listings_id = 25
+AND reviews.review LIKE '%vestibulum%'
+ORDER BY reviews.review_date DESC;
+
+
+
+
+SELECT AVG(accuracy), AVG(communication), AVG(cleanliness), AVG(`location`), AVG(`check-in`), AVG(`value`)
+FROM reviews
+INNER JOIN bookings
+ON reviews.bookings_id = bookings.b_id
+LEFT JOIN users
+ON bookings.users_id = users.u_id
+WHERE bookings.listings_id = 25;
+
+accuracy, communication, cleanliness, `location`, `check-in`, `value`
