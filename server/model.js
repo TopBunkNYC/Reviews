@@ -21,12 +21,12 @@ module.exports = {
 
   getRatings: (listingID, callback) => {
     let SQLquery = `SELECT AVG(accuracy) AS accuracy, AVG(communication) AS communication, AVG(cleanliness) as cleanliness, AVG(\`location\`) as location, AVG(\`check-in\`) as checkin, AVG(\`value\`) as value
-    FROM reviews
-    INNER JOIN bookings
-    ON reviews.bookings_id = bookings.b_id
-    LEFT JOIN users
-    ON bookings.users_id = users.u_id
-    WHERE bookings.listings_id = ${listingID};`;
+    FROM Reviews
+    INNER JOIN Bookings
+    ON Reviews.bookings_id = Bookings.b_id
+    LEFT JOIN Users
+    ON Bookings.users_id = Users.u_id
+    WHERE Bookings.listings_id = ${listingID};`;
     db.query(SQLquery, (error, response) => {
       if (error) {
         console.error(error);
@@ -38,14 +38,14 @@ module.exports = {
 
   search: (listingID, query, callback) => {
     const SQLquery = `SELECT *
-    FROM reviews
-    INNER JOIN bookings
-    ON reviews.bookings_id = bookings.b_id
-    LEFT JOIN users
-    ON bookings.users_id = users.u_id
-    WHERE bookings.listings_id = ${listingID}
-    AND reviews.review LIKE "${query}"
-    ORDER BY reviews.review_date DESC;`;
+    FROM Reviews
+    INNER JOIN Bookings
+    ON Reviews.bookings_id = Bookings.b_id
+    LEFT JOIN Users
+    ON Bookings.users_id = Users.u_id
+    WHERE Bookings.listings_id = ${listingID}
+    AND Reviews.review LIKE "${query}"
+    ORDER BY Reviews.review_date DESC;`;
     db.query(SQLquery, (error, response) => {
       if (error) {
         console.error(error);
