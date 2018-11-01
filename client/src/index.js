@@ -1,3 +1,3 @@
-import App from './index.jsx';
+import Reviews from './index.jsx';
 
-window.Reviews = App;
+window.Reviews = Reviews;
