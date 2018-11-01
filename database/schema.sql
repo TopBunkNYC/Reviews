@@ -32,7 +32,7 @@ CREATE TABLE Reviews (
   `bookings_id` INTEGER NOT NULL,
   `review_date` DATE,
   `review` VARCHAR(5000),
-  `accuracy` TINYINT CHECK,
+  `accuracy` TINYINT,
   `communication` TINYINT,
   `cleanliness` TINYINT,
   `location` TINYINT,
