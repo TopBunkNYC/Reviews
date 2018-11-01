@@ -10,13 +10,14 @@ const app = exprgess();
 const source = path.join(__dirname, '/../client/dist');
 
 app.use(bodyParser.json());
-app.use(cors());
-app.use(express.static(source));
 
-app.all('/*', function(req, res, next) {
+app.use(cors());
+app.all('/', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   next();
- });
+});
+
+app.use(express.static(source));
 
 app.use('/', router);
 
