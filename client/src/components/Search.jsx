@@ -64,15 +64,16 @@ export default class Search extends React.Component {
         <span className="totalReviewsDiv">
           <h2 style={{"marginTop": "0px"}}>{this.state.ratingsLoaded ? this.state.totalRatings : 0} Reviews<StarsModel rating={this.state.starsLoaded ? this.state.avgRating : 0} dimensions='25px' /></h2>
         </span>
-        <span className="searchBarDiv">
-            <input
-              className="searchBar"
-              type="search"
-              placeholder="Search reviews"
-              onChange={this.searchQuery}
-              value={this.state.query}
-              onKeyPress={this.handleKeyPress}
-            ></input>
+        <span className="searchBarDiv" style={{}}>
+          <img src="http://imgur.com/npblqeD.png" style={{"width": "20px", "height": "20px", "float": "left", "marginTop": "5px"}}/>
+          <input
+            className="searchBar"
+            type="search"
+            placeholder="Search reviews"
+            onChange={this.searchQuery}
+            value={this.state.query}
+            onKeyPress={this.handleKeyPress}
+          ></input>
         </span>
       </div>
     )

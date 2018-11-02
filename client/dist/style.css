@@ -37,20 +37,29 @@ a:hover {
 
 .totalReviewsDiv {
   float: left;
-  width: 66.67%;
+  /* width: 50%; */
   height: 45px;
   vertical-align: middle;
 }
 
 .searchBarDiv {
   float: right;
-  width: 33.33%;
-  height: 45px;
+  width: 300px;
+  height: auto;
   vertical-align: middle;
+  border-width: 1px solid #EBEBEB;
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+  border-right: 1px solid #EBEBEB;
+  border-left: 1px solid #EBEBEB;
+  border-color: #EBEBEB;
+  border-radius: 2px;
+  background-color: transparent;
 }
 
 .searchBar {
-  width: 100%;
+  width: 90%;
+  float: right;
   height: 30px;
   vertical-align: middle;
   font-size: 14px;
@@ -58,14 +67,6 @@ a:hover {
   font-family: 'Roboto', sans-serif;
   color: #484848;
   font-weight: 600;
-  border-width: 1px;
-  border-color: #EBEBEB;
-  border-radius: 2px;
-  background-color: transparent;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 7px;
-  padding-right: 7px;
-  margin-bottom: 8px;
-
+  float: right;
+  border-width: 0px;
 }
