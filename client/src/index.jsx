@@ -34,7 +34,6 @@ export default class Reviews extends React.Component {
       }
     };
 
-    // axios.get('http://18.218.27.164/reviews', params)
     axios.get('/reviews', params)
     .then((result) => {
       this.setState({
@@ -56,7 +55,6 @@ export default class Reviews extends React.Component {
       }
     };
 
-    // axios.get('http://18.218.27.164/search', params)
     axios.get('/search', params)
       .then((result) => {
         this.setState({
@@ -78,7 +76,6 @@ export default class Reviews extends React.Component {
       }
     };
     
-    // axios.get('http://18.218.27.164/ratings', params)
     axios.get('/ratings', params)
     .then((result) => {
       if (result.data[0].accuracy !== null) {

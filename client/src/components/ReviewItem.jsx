@@ -5,7 +5,7 @@ export default class ReviewItem extends React.Component {
     super(props);
     this.state = {
       truncate: false,
-      shortText: this.props.review.review.substring(0, 280) + ' ... show more',
+      shortText: this.props.review.review.substring(0, 280) + '...',
       reviewText: this.props.review.review
     }
     this.clickHandler = this.clickHandler.bind(this);
@@ -19,7 +19,8 @@ export default class ReviewItem extends React.Component {
     }
   }
 
-  clickHandler() {
+  clickHandler(event) {
+    event.preventDefault();
     if (this.state.truncate === true) {
       this.setState({
         truncate: false
@@ -32,9 +33,12 @@ export default class ReviewItem extends React.Component {
   }
 
   render() {
+    const renderText = this.state.truncate === true ?
+      (<div>{this.state.shortText} <a href='' onClick={this.clickHandler}>Read more</a> </div>)
+      : (<div>{this.state.reviewText}</div>);
     return (
       <div style={{"borderBottom": "1px solid #EBEBEB", "paddingTop": "10px", "paddingBottom": "10px"}}>
-        <div style={{"width": "100%", "paddingBottom": "20px"}}>
+        <div style={{"paddingBottom": "20px"}}>
           <span style={{ "float": "left", "width": "10%" }}>
             <img src={this.props.review.photo_url} style={{"width": "50px", "height": "50px"}}/>
           </span>
@@ -43,11 +47,10 @@ export default class ReviewItem extends React.Component {
             {this.props.review.review_date.substring(0, 10)}
           </span>
           <span style={{ "float": "right", "width": "10%" }}>
-            <a href="/report"><img src="/images/flagReview.png" style={{"width": "15px", "height": "15px", "borderRadius": "50%"}}/></a>
+            <a href="/report"><img src="http://imgur.com/8ELuIV8.png" style={{"width": "15px", "height": "15px", "borderRadius": "50%"}}/></a>
           </span>
         </div>
-        {/* <div style={{ "width": "100%" }}>{this.props.review.review}</div> */}
-        <div style={{ "width": "100%" }} onClick={this.clickHandler}>{this.state.truncate ? this.state.shortText : this.state.reviewText}</div>
+        {renderText}
       </div>
     )
   }
