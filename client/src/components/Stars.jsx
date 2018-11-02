@@ -27,36 +27,36 @@ export default class Stars extends React.Component {
 
   render() {
     return (
-      <div style={{ "display": "block", "width": "100%", "paddingTop": "10px", "paddingBottom": "10px"}}>
-        <div className="floatLeft50">
+      <div style={{"overflow": "hidden", "height": "100%", "paddingTop": "20px", "paddingBottom": "20px", "borderBottom": "1px solid #EBEBEB" }}>
+        <span className="floatLeft50" style={{"float": "left", "width": "50%"}}>
           <div>
-            <span className="floatLeft50">Accuracy</span>
-            <span className="floatRight50"><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].accuracy : 0} dimensions='15px' /></span>
+            <span className="floatLeft50" style={{"float": "left", "width": "50%"}}>Accuracy</span>
+            <span className="floatRight50" style={{"float": "right", "width": "50%"}}><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].accuracy : 0} dimensions='15px' /></span>
           </div>
           <div>
-            <span className="floatLeft50">Communication</span>
-            <span className="floatRight50"><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].communication : 0} dimensions='15px' /></span>
+            <span className="floatLeft50" style={{"float": "left", "width": "50%"}}>Communication</span>
+            <span className="floatRight50" style={{"float": "right", "width": "50%"}}><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].communication : 0} dimensions='15px' /></span>
           </div>
           <div>
-            <span className="floatLeft50">Cleanliness</span>
-            <span className="floatRight50"><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].cleanliness : 0} dimensions='15px' /></span>
+            <span className="floatLeft50" style={{"float": "left", "width": "50%"}}>Cleanliness</span>
+            <span className="floatRight50" style={{"float": "right", "width": "50%"}}><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].cleanliness : 0} dimensions='15px' /></span>
           </div>
-        </div>
+        </span>
 
-        <div className="floatRight50">
+        <span className="floatRight50">
           <div>
-            <span className="floatLeft50">Location</span>
-            <span className="floatRight50"><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].location : 0} dimensions='15px' /></span>
+            <span className="floatLeft50" style={{"float": "left", "width": "50%"}}>Location</span>
+            <span className="floatRight50" style={{"float": "right", "width": "50%"}}><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].location : 0} dimensions='15px' /></span>
           </div>
           <div>
-            <span className="floatLeft50">Check-in</span>
-            <span className="floatRight50"><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].checkin : 0} dimensions='15px' /></span>
+            <span className="floatLeft50" style={{"float": "left", "width": "50%"}}>Check-in</span>
+            <span className="floatRight50" style={{"float": "right", "width": "50%"}}><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].checkin : 0} dimensions='15px' /></span>
           </div>
           <div>
-            <span className="floatLeft50">Value</span>
-            <span className="floatRight50"><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].value : 0} dimensions='15px' /></span>
+            <span className="floatLeft50" style={{"float": "left", "width": "50%"}}>Value</span>
+            <span className="floatRight50" style={{"float": "right", "width": "50%"}}><StarsModel rating={this.state.isLoaded ? this.state.ratings[0].value : 0} dimensions='15px' /></span>
           </div>
-        </div>
+        </span>
       </div>
     )
   }
