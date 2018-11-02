@@ -46,12 +46,14 @@ export default class Reviews extends React.Component {
   }
 
   searchReviews(query) {
+    let parsedQuery = (query.split(" "));
+
     let queryString = window.location.search;
     let listingID = (queryString.slice(-3) * 1);
     let params = {
       params: {
         id: listingID,
-        query: `%${query}%`
+        query: parsedQuery
       }
     };
 
@@ -66,6 +68,28 @@ export default class Reviews extends React.Component {
         console.error(error);
       })
   }
+
+  // searchReviews(query) {
+  //   let queryString = window.location.search;
+  //   let listingID = (queryString.slice(-3) * 1);
+  //   let params = {
+  //     params: {
+  //       id: listingID,
+  //       query: `%${query}%`
+  //     }
+  //   };
+
+  //   axios.get('/search', params)
+  //     .then((result) => {
+  //       this.setState({
+  //         search: result.data,
+  //         showSearch: true
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     })
+  // }
 
   getRatings() {
     let queryString = window.location.search;

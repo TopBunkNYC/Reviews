@@ -44,8 +44,9 @@ module.exports = {
     LEFT JOIN Users
     ON Bookings.users_id = Users.u_id
     WHERE Bookings.listings_id = ${listingID}
-    AND Reviews.review LIKE "${query}"
+    ${query}
     ORDER BY Reviews.review_date DESC;`;
+
     db.query(SQLquery, (error, response) => {
       if (error) {
         console.error(error);
