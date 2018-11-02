@@ -60,7 +60,7 @@ export default class Search extends React.Component {
 
   render() {
     return (
-      <div style={{"height": "35px", "paddingTop": "20px", "paddingBottom": "20px", "borderBottom": "1px solid #EBEBEB", "borderTop": "1px solid #EBEBEB"}}>
+      <div style={{"overflow": "hidden", "height": "100%", "paddingTop": "20px", "paddingBottom": "20px", "borderBottom": "1px solid #EBEBEB", "borderTop": "1px solid #EBEBEB"}}>
         <span className="totalReviewsDiv">
           <h2 style={{"marginTop": "0px"}}>{this.state.ratingsLoaded ? this.state.totalRatings : 0} Reviews<StarsModel rating={this.state.starsLoaded ? this.state.avgRating : 0} dimensions='25px' /></h2>
         </span>

@@ -15,7 +15,7 @@ export default class ReviewList extends React.Component {
   });
   
     return (
-      <div style={{ "display": "block", "width": "100%", "paddingTop": "10px", "paddingBottom": "10px" }}>
+      <div style={{"paddingTop": "10px", "paddingBottom": "10px"}}>
         {review}
       </div>
     )
