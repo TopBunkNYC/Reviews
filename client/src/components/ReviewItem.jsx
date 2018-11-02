@@ -9,6 +9,7 @@ export default class ReviewItem extends React.Component {
       reviewText: this.props.review.review
     }
     this.clickHandler = this.clickHandler.bind(this);
+    this.showAlert = this.showAlert.bind(this);
   }
 
   componentDidMount() {
@@ -32,6 +33,11 @@ export default class ReviewItem extends React.Component {
     }
   }
 
+  showAlert(event) {
+    event.preventDefault();
+    alert('Thank you for flagging this review! This is not how the real AirBnB page does this, but that would have been too complicated given our numerous components. Thank you for understanding.');
+  }
+
   render() {
     const renderText = this.state.truncate === true ?
       (<div>{this.state.shortText} <a href='' onClick={this.clickHandler}>Read more</a> </div>)
@@ -47,7 +53,7 @@ export default class ReviewItem extends React.Component {
             {this.props.review.review_date.substring(0, 10)}
           </span>
           <span className="reviewItemHeaderFlag">
-            <img src="http://imgur.com/8ELuIV8.png" className="reviewItemHeaderFlagImg"/>
+            <a href='/'><img src="http://imgur.com/8ELuIV8.png" className="reviewItemHeaderFlagImg" onClick={this.showAlert}/></a>
           </span>
         </div>
         {renderText}
