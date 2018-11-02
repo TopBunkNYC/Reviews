@@ -14,17 +14,7 @@ module.exports = {
   },
 
   search: (req, res) => {
-    let searchQuery = req.query.query;
-    let queryString = '';
-    for (let i = 0; i < searchQuery.length; i++) {
-      if (i === 0) {
-        queryString += `AND Reviews.review LIKE "%${searchQuery[0]}%"`;
-      } else {
-        queryString += ` OR "%${searchQuery[i]}%"`;
-      }
-    }
-
-    search(req.query.id, queryString, (response) => {
+    search(req.query.id, req.query.query, (response) => {
       res.send(response);
     });
   },
