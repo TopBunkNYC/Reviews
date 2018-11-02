@@ -15,7 +15,7 @@ export default class ReviewList extends React.Component {
   });
   
     return (
-      <div style={{"paddingTop": "10px", "paddingBottom": "10px"}}>
+      <div className="reviewListContainer">
         {review}
       </div>
     )

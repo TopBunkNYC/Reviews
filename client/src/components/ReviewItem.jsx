@@ -37,17 +37,17 @@ export default class ReviewItem extends React.Component {
       (<div>{this.state.shortText} <a href='' onClick={this.clickHandler}>Read more</a> </div>)
       : (<div>{this.state.reviewText}</div>);
     return (
-      <div style={{"borderBottom": "1px solid #EBEBEB", "paddingTop": "10px", "paddingBottom": "10px"}}>
-        <div style={{"paddingBottom": "20px"}}>
-          <span style={{ "float": "left", "width": "60px" }}>
-            <img src={this.props.review.photo_url} style={{"width": "50px", "height": "50px", "borderRadius": "50%"}}/>
+      <div className="reviewItemContainer">
+        <div className="reviewItemHeader">
+          <span className="reviewItemHeaderPhotoSpan">
+            <img src={this.props.review.photo_url} className="reviewItemHeaderPhoto"/>
           </span>
-          <span style={{ "float": "center", "width": "60%" }}>
+          <span className="reviewItemHeaderInfo">
             {this.props.review.display_name} <br />
             {this.props.review.review_date.substring(0, 10)}
           </span>
-          <span style={{ "float": "right", "width": "25px" }}>
-            <img src="http://imgur.com/8ELuIV8.png" style={{"width": "15px", "height": "15px"}}/>
+          <span className="reviewItemHeaderFlag">
+            <img src="http://imgur.com/8ELuIV8.png" className="reviewItemHeaderFlagImg"/>
           </span>
         </div>
         {renderText}

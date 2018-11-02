@@ -21,8 +21,8 @@ a:hover {
   text-decoration: underline;
 }
 
-.totalReviews {
-  font-size: 1em;
+h2 {
+  margin-top: 3px;
 }
 
 .floatLeft50 {
@@ -69,4 +69,70 @@ a:hover {
   font-weight: 600;
   float: right;
   border-width: 0px;
+}
+
+.starsContainer {
+  overflow: hidden;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.searchContainer {
+  overflow: hidden;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EBEBEB;
+  border-top: 1px solid #EBEBEB;
+}
+
+.magnifyImg {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.reviewItemContainer {
+  border-bottom: 1px solid #EBEBEB;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.reviewItemHeader {
+  padding-bottom: 20px;
+}
+
+.reviewItemHeaderPhotoSpan {
+  float: left;
+  width: 60px;
+}
+
+.reviewItemHeaderPhoto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.reviewItemHeaderInfo {
+  float: center;
+  width: 60%;
+}
+
+.reviewItemHeaderFlag {
+  float: right;
+  width: 25px;
+}
+
+.reviewItemHeaderFlagImg {
+  width: 15px;
+  height: 15px;
+}
+
+.reviewListContainer {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
