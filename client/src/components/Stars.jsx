@@ -27,7 +27,7 @@ export default class Stars extends React.Component {
 
   render() {
     return (
-      <div style={{ "display": "block", "width": "100%", "paddingTop": "10px", "paddingBottom": "10px" }}>
+      <div style={{ "display": "block", "width": "100%", "paddingTop": "10px", "paddingBottom": "10px"}}>
         <div className="floatLeft50">
           <div>
             <span className="floatLeft50">Accuracy</span>

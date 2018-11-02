@@ -39,15 +39,15 @@ export default class ReviewItem extends React.Component {
     return (
       <div style={{"borderBottom": "1px solid #EBEBEB", "paddingTop": "10px", "paddingBottom": "10px"}}>
         <div style={{"paddingBottom": "20px"}}>
-          <span style={{ "float": "left", "width": "10%" }}>
-            <img src={this.props.review.photo_url} style={{"width": "50px", "height": "50px"}}/>
+          <span style={{ "float": "left", "width": "60px" }}>
+            <img src={this.props.review.photo_url} style={{"width": "50px", "height": "50px", "borderRadius": "50%"}}/>
           </span>
           <span style={{ "float": "center", "width": "60%" }}>
             {this.props.review.display_name} <br />
             {this.props.review.review_date.substring(0, 10)}
           </span>
-          <span style={{ "float": "right", "width": "10%" }}>
-            <a href="/report"><img src="http://imgur.com/8ELuIV8.png" style={{"width": "15px", "height": "15px", "borderRadius": "50%"}}/></a>
+          <span style={{ "float": "right", "width": "25px" }}>
+            <img src="http://imgur.com/8ELuIV8.png" style={{"width": "15px", "height": "15px"}}/>
           </span>
         </div>
         {renderText}
