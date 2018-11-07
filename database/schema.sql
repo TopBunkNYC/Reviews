@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS staybnb;
-CREATE DATABASE staybnb;
-USE staybnb;
+DROP DATABASE IF EXISTS topbunk;
+CREATE DATABASE topbunk;
+USE topbunk;
 
 CREATE TABLE Listings (
   `l_id` INTEGER NOT NULL AUTO_INCREMENT,
