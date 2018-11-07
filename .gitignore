@@ -1,4 +1,4 @@
-meow.pem
+*.pem
 .DS_Store
 config.js
 npm
