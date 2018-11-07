@@ -1,25 +1,26 @@
 {
   "name": "reviews",
-  "version": "1.0.0",
-  "description": "Reviews module for Staybnb \"item description page\"",
+  "version": "1.1.0",
+  "description": "Reviews module for TopBunk",
   "main": "index.js",
   "scripts": {
     "server-dev": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
-    "seed": "mysql -u stacykim -p --host=staybnb.c1bo9omfdnqb.us-east-2.rds.amazonaws.com stacykim",
+    "seed": "mysql -u root -p --host=staybnb.c1bo9omfdnqb.us-east-2.rds.amazonaws.com reviews",
     "start-aws": "pm2 start server/index.js",
     "listpm2": "pm2 list",
     "pm2server": "pm2 show server",
     "pm2stop": "pm2 stop 0",
-    "connect": "chmod 400 meow.pem && ssh -i \"meow.pem\" ubuntu@ec2-18-218-27-164.us-east-2.compute.amazonaws.com"
+    "connect": "ssh -i \"topbunkreviews.pem\" ubuntu@ec2-PLACEHOLDER.us-east-2.compute.amazonaws.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Staybnb/Reviews.git"
+    "url": "git+https://github.com/TopBunkNYC/Reviews.git"
   },
   "author": "Stacy Kim",
+  "contributor": "David Weinzimmer",
   "license": "MIT",
-  "homepage": "https://github.com/Staybnb/Reviews#readme",
+  "homepage": "https://github.com/TopBunkNYC#readme",
   "devDependencies": {
     "babel-core": "^6.23.3",
     "babel-loader": "^7.1.5",
