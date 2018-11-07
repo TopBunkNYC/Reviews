@@ -7,7 +7,7 @@ connection.connect((err) => {
   if (err) {
     console.error('error: ' + err.stack);
   } else {
-    console.log('connected: ' + connection.threadId);
+    console.log('connected on threadId: ' + connection.threadId);
   }
 });
 
