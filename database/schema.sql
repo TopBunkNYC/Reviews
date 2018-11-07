@@ -29,7 +29,7 @@ CREATE TABLE Bookings (
 
 CREATE TABLE Reviews (
   `r_id` INTEGER NOT NULL AUTO_INCREMENT,
-  `bookings_id` INTEGER NOT NULL,
+  `booking_id` INTEGER NOT NULL,
   `review_date` DATE,
   `review` VARCHAR(5000),
   `accuracy` TINYINT,
@@ -39,5 +39,5 @@ CREATE TABLE Reviews (
   `check-in` TINYINT,
   `value` TINYINT,
   PRIMARY KEY (`r_id`),
-  FOREIGN KEY (`bookings_id`) REFERENCES Bookings(`b_id`)
+  FOREIGN KEY (`booking_id`) REFERENCES Bookings(`b_id`)
 );
