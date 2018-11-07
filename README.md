@@ -15,7 +15,7 @@ npm run build
 npm start
 ```
 
-Then access the application at (http://localhost:3001).
+Then access the application at (http://localhost:8001).
 
 To run in developer mode:
 ```sh
