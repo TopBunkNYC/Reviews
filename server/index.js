@@ -21,6 +21,6 @@ app.use(express.static(source));
 
 app.use('/', router);
 
-app.listen(7000, () => { console.log('Listening on port 7000'); });
+app.listen(8001, () => { console.log('Listening on port 8001'); });
 
 module.exports.app = app;
