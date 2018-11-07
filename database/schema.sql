@@ -18,13 +18,13 @@ CREATE TABLE Users (
 
 CREATE TABLE Bookings (
   `b_id` INTEGER NOT NULL AUTO_INCREMENT,
-  `listings_id` INTEGER NOT NULL,
-  `users_id` INTEGER NOT NULL,
+  `listing_id` INTEGER NOT NULL,
+  `user_id` INTEGER NOT NULL,
   `stay_start` DATE,
   `stay_end` DATE,
   PRIMARY KEY (`b_id`),
-  FOREIGN KEY (`listings_id`) REFERENCES Listings(`l_id`),
-  FOREIGN KEY (`users_id`) REFERENCES Users(`u_id`)
+  FOREIGN KEY (`listing_id`) REFERENCES Listings(`l_id`),
+  FOREIGN KEY (`user_id`) REFERENCES Users(`u_id`)
 );
 
 CREATE TABLE Reviews (
