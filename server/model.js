@@ -61,7 +61,32 @@ module.exports = {
     });
   },
 
-  postReview: (params) => {},
+  postReview: (options, callback) => {
+    var orderedOptions = [
+      options.bookingId || Math.floor(Math.random() * 15000000),
+      options.reviewDate || Date(Date.now()),
+      options.reviewText, 
+      options.accuracy || null,
+      options.communication || null, 
+      options.cleanliness || null, 
+      options.location || null, 
+      options.checkin || null, 
+      options.value || null
+    ];
+    db.query(`
+      INSERT into Reviews 
+        (booking_id, review_date, review_text, accuracy, 
+        communication, cleanliness, location, checkin, value)
+      VALUES
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `, (...orderedOptions), (err, response) => {
+      if (err) {
+        console.error(err);
+      } else {
+        callback(response);
+      }
+    })
+  },
 
   editReview: (reviewId, newReviewText, callback) => {
     db.query(`
