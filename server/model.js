@@ -1,7 +1,7 @@
 const db = require('../database/index.js');
 
 module.exports = {
-  getAllReviews: (listingID, callback) => {
+  getAllReviews: (listingId, callback) => {
     db.query(`SELECT *
       FROM Reviews
       INNER JOIN Bookings
@@ -10,7 +10,7 @@ module.exports = {
       ON Bookings.user_id = Users.u_id
       WHERE Bookings.listing_id = ?
       ORDER BY Reviews.review_date DESC;
-    `,(listingID), (error, response) => {
+    `,(listingId), (error, response) => {
       if (error) {
         console.error(error);
       } else {
@@ -19,7 +19,7 @@ module.exports = {
     });
   },
 
-  getRatings: (listingID, callback) => {
+  getRatings: (listingId, callback) => {
     db.query(`SELECT 
       AVG(accuracy) AS accuracy, 
       AVG(communication) AS communication, 
@@ -42,7 +42,7 @@ module.exports = {
     });
   },
 
-  getSearch: (listingID, query, callback) => {
+  getSearch: (listingId, query, callback) => {
     db.query(`SELECT *
       FROM Reviews
       INNER JOIN Bookings
@@ -52,7 +52,7 @@ module.exports = {
       WHERE Bookings.listing_id = ?
       AND Reviews.review LIKE ?
       ORDER BY Reviews.review_date DESC;
-    `, (listingID, `"${query}"`), (error, response) => {
+    `, (listingId, `"${query}"`), (error, response) => {
       if (error) {
         console.error(error);
       } else {
@@ -65,5 +65,15 @@ module.exports = {
 
   editReview: () => {},
 
-  deleteReview: () => {}
+  deleteReview: (listingId, callback) => {
+    db.query(`DELETE FROM Reviews 
+      WHERE r_id = ?
+    `, (listingId), (err, response) => {
+      if (err) {
+        console.error(err);
+      } else {
+        callback(response);
+      }
+    });
+  }
 };
