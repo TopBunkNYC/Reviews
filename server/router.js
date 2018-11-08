@@ -8,9 +8,9 @@ router.get('/reviews', controller.getAllReviews);
 router.get('/ratings', controller.getRatings);
 router.get('/search', controller.getSearch);
 
-router.post('/reviews', controller.postReview);
-router.put('/reviews', controller.editReview);
-router.delete('/reviews', controller.deleteReview);
+// router.post('/reviews', controller.postReview);
+// router.put('/reviews', controller.editReview);
+// router.delete('/reviews', controller.deleteReview);
 
 router.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '/../client/dist/index.html'));
