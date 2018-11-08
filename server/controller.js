@@ -17,16 +17,23 @@ module.exports = {
     models.getSearch(req.query.id, req.query.query, (response) => {
       res.send(response);
     });
+  },
+
+  postReview: (req, res) => {   // IMPLEMENT!
+    models.postReview(req.query.parameters, thing, thing, (response) => {
+      res.send(response);
+    });
+  },
+
+  editReview: (req, res) => {   // IMPLEMENT!
+    models.editReview(req.query.parameters, thing, thing, (response) => {
+      res.send(response);
+    });
+  },
+
+  deleteReview: (req, res) => {
+    models.deleteReview(req.query.id, (response) => {
+      res.send(response);
+    });
   }
-  // ,
-
-  // postReview: (req, res) => {
-  //   models.
-  // },
-
-  // editReview: (req, res) => {
-  //   models.editReview()
-  // },
-
-  // deleteReview: (req, res) => {}
 };
