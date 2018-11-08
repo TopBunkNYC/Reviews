@@ -50,7 +50,7 @@ module.exports = {
       LEFT JOIN Users
       ON Bookings.user_id = Users.u_id
       WHERE Bookings.listing_id = ?
-      AND Reviews.review LIKE ?
+      AND Reviews.review_text LIKE ?
       ORDER BY Reviews.review_date DESC;
     `, (listingId, `"${query}"`), (error, response) => {
       if (error) {
@@ -61,14 +61,25 @@ module.exports = {
     });
   },
 
-  postReview: () => {},
+  postReview: (params) => {},
 
-  editReview: () => {},
+  editReview: (reviewId, newReviewText, callback) => {
+    db.query(`
+      UPDATE Reviews SET review_text = ?
+      WHERE r_id = ?;
+    `, (newReviewText, reviewId), (err, response) => {
+      if (err) {
+        console.error(err);
+      } else {
+        callback(response);
+      }
+    })
+  },
 
-  deleteReview: (listingId, callback) => {
+  deleteReview: (reviewId, callback) => {
     db.query(`DELETE FROM Reviews 
       WHERE r_id = ?
-    `, (listingId), (err, response) => {
+    `, (reviewId), (err, response) => {
       if (err) {
         console.error(err);
       } else {
