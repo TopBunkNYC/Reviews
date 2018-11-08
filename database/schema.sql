@@ -22,9 +22,9 @@ CREATE TABLE Bookings (
   `user_id` INTEGER NOT NULL,
   `stay_start` DATE,
   `stay_end` DATE,
-  PRIMARY KEY (`b_id`),
-  FOREIGN KEY (`listing_id`) REFERENCES Listings(`l_id`),
-  FOREIGN KEY (`user_id`) REFERENCES Users(`u_id`)
+  PRIMARY KEY (`b_id`)
+  -- FOREIGN KEY (`listing_id`) REFERENCES Listings(`l_id`),
+  -- FOREIGN KEY (`user_id`) REFERENCES Users(`u_id`)
 );
 
 CREATE TABLE Reviews (
@@ -38,6 +38,6 @@ CREATE TABLE Reviews (
   `location` TINYINT,
   `checkin` TINYINT,
   `value` TINYINT,
-  PRIMARY KEY (`r_id`),
-  FOREIGN KEY (`booking_id`) REFERENCES Bookings(`b_id`)
+  PRIMARY KEY (`r_id`)
+  -- FOREIGN KEY (`booking_id`) REFERENCES Bookings(`b_id`)
 );
