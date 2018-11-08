@@ -14,14 +14,19 @@ module.exports = {
   },
 
   getSearch: (req, res) => {
-    models.search(req.query.id, req.query.query, (response) => {
+    models.getSearch(req.query.id, req.query.query, (response) => {
       res.send(response);
     });
-  },
+  }
+  // ,
 
-  postReview: (req, res) => {},
+  // postReview: (req, res) => {
+  //   models.
+  // },
 
-  editReview: (req, res) => {},
+  // editReview: (req, res) => {
+  //   models.editReview()
+  // },
 
-  deleteReview: (req, res) => {}
+  // deleteReview: (req, res) => {}
 };

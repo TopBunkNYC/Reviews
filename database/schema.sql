@@ -36,7 +36,7 @@ CREATE TABLE Reviews (
   `communication` TINYINT,
   `cleanliness` TINYINT,
   `location` TINYINT,
-  `check-in` TINYINT,
+  `checkin` TINYINT,
   `value` TINYINT,
   PRIMARY KEY (`r_id`),
   FOREIGN KEY (`booking_id`) REFERENCES Bookings(`b_id`)
