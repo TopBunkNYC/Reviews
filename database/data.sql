@@ -217,501 +217,501 @@ INSERT INTO Bookings (b_id, listing_id, user_id, stay_start, stay_end) VALUES (9
 INSERT INTO Bookings (b_id, listing_id, user_id, stay_start, stay_end) VALUES (100,26,1,'2018-06-03','2018-01-05');
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (1, 1, '2017-11-01', 'Nunc vitae cursus nulla, vitae mollis ligula. Praesent vitae erat non sapien iaculis blandit. Mauris porta bibendum magna et commodo. Pellentesque laoreet felis eu leo tempus rutrum. Integer ac molestie dolor. Nam interdum augue at consequat scelerisque. Maecenas sed libero et ante cursus condimentum et a libero. Nam gravida lacus enim, eget molestie lacus imperdiet quis. Nulla justo risus, egestas a ornare non, blandit vel eros. Nulla eget maximus eros. Aenean pharetra lorem et vehicula convallis. In consequat egestas commodo. Pellentesque vehicula aliquam nibh a pharetra. Proin dui velit, tempus ut feugiat at, faucibus quis elit.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (2, 2, '2017-11-01', 'Phasellus vestibulum sodales massa ac vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at facilisis nulla. Mauris a aliquet ante, euismod gravida mauris. Nam hendrerit vitae eros vitae accumsan. Nullam in turpis libero. Praesent commodo quis urna at pharetra. Aliquam mauris nisi, vulputate ut mauris ut, sollicitudin molestie justo. Ut ac aliquam magna.', 5, 4, 3, 2, 1, 2);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (3, 3, '2017-11-01', 'Vestibulum id imperdiet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sagittis augue ac venenatis faucibus. Curabitur in est egestas, euismod justo in, lobortis dolor. Etiam maximus ex nec consectetur molestie. Vestibulum dolor est, dignissim ac leo et, consectetur sagittis ligula. Nulla vehicula convallis hendrerit. In posuere porta commodo.', 3, 4, 5, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (4, 4, '2017-11-01', 'Ut eu lorem risus. Curabitur mattis venenatis quam, eu ultrices mi venenatis a. Aliquam sollicitudin augue non est pulvinar, vel laoreet justo bibendum. Curabitur quis purus diam. Vivamus tempus orci at sagittis luctus. Nullam mauris ipsum, gravida pulvinar consequat vehicula, ornare id enim. Cras cursus mauris id erat varius, quis gravida ipsum mollis. Aenean ligula diam, ultrices id imperdiet vitae, malesuada sit amet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis elit arcu. Sed semper tellus velit, sit amet tristique quam lobortis imperdiet. Phasellus id posuere turpis. Aliquam ut lacus eu nisi hendrerit vulputate.', 4, 5, 1, 2, 3, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (5, 5, '2017-11-01', 'Donec consectetur eleifend lacus nec feugiat. Praesent vel orci ante. Aenean cursus, ante non commodo consectetur, lacus augue efficitur massa, at fringilla orci eros in elit. Proin ultrices tortor nunc, eget vehicula erat posuere eget. In interdum neque ac sem convallis hendrerit. Cras egestas sollicitudin mattis. Vivamus gravida purus sit amet consectetur tempor. Ut elit orci, iaculis a congue sed, suscipit at ex. Quisque at lacus eu tellus congue rutrum euismod eu leo. Morbi blandit sapien erat, a scelerisque lorem iaculis non. Nunc ultrices justo vel elit porttitor rutrum. Nulla suscipit ex sapien, ut bibendum erat imperdiet id. Quisque sit amet felis rutrum, iaculis ante convallis, semper tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum maximus fermentum.', 5, 4, 3, 2, 1, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (6, 6, '2017-11-01', 'In venenatis eget nisl eget commodo. Nunc tempus est non feugiat elementum. Vestibulum viverra, ipsum quis vulputate consequat, libero nunc porttitor libero, at molestie erat risus convallis ligula. Curabitur vitae posuere sapien, quis eleifend est. Nam placerat tortor ac massa tincidunt varius. Donec ut pretium risus, eu condimentum enim. Aliquam rhoncus ante magna, sit amet elementum mi feugiat a. Mauris suscipit urna quis ipsum auctor, non ullamcorper mi commodo. Maecenas in hendrerit est. Nulla rhoncus congue posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 3, 2, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (7, 7, '2017-11-01', 'Nunc in sollicitudin tellus. Ut bibendum quam eget lectus ultricies molestie. Nulla sit amet imperdiet enim, vitae porta magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nisl a nisi lobortis vestibulum. Sed id justo dictum elit venenatis tempor. Mauris elementum massa enim, id pulvinar odio mattis sed. Nunc suscipit erat nec ex aliquet mollis. Vestibulum vel sodales mi, vitae sollicitudin magna. Quisque mollis, leo quis egestas semper, nisi elit interdum mauris, eu euismod est nulla at libero. Proin ut nisl at mauris mattis tristique.', 4, 5, 4, 3, 2, 1);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (8, 8, '2017-11-01', 'Curabitur consequat dolor quis orci imperdiet tristique. Nunc eu purus eu tellus facilisis vestibulum fermentum ut erat. Aenean varius auctor urna, in porttitor lectus tempor pulvinar. Vivamus felis mauris, maximus eget massa in, ullamcorper finibus quam. Aenean nibh dui, commodo sed metus et, laoreet placerat nunc. Maecenas iaculis justo lectus, tincidunt posuere ante tempor quis. Aenean ligula nulla, pharetra id est eleifend, cursus auctor eros. Quisque ut porta leo. Duis lacus odio, tempor at nisi at, pellentesque accumsan felis. Nulla luctus dui mattis urna egestas commodo. Fusce quis luctus tortor.', 2, 3, 4, 5, 4, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (9, 9, '2017-11-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue, dolor nec dictum accumsan, purus velit rhoncus justo, consequat hendrerit felis eros quis justo. Proin commodo malesuada libero. Aenean pharetra est eu maximus consequat. Etiam mattis et mi in pulvinar. Etiam rhoncus urna non est ultricies, vitae gravida est congue. Morbi lacinia nibh eget interdum vestibulum. Aliquam vitae metus sed enim pretium malesuada ac vel nibh. Duis tempus pharetra lectus. Nulla sit amet maximus felis.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (10, 10, '2017-11-01', 'Vestibulum ex ante, blandit et lacus tincidunt, pulvinar mattis lorem. Ut condimentum sem risus, vel pulvinar turpis vulputate at. Nullam accumsan sit amet ex non semper. Vestibulum quis bibendum metus. Curabitur non nulla velit. Proin porttitor nibh id dolor convallis ullamcorper. Morbi accumsan nec odio at sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed finibus tincidunt vehicula. In feugiat magna nec massa sollicitudin maximus eu in nisi.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (11, 11, '2017-12-01', 'Nunc vitae cursus nulla, vitae mollis ligula. Praesent vitae erat non sapien iaculis blandit. Mauris porta bibendum magna et commodo. Pellentesque laoreet felis eu leo tempus rutrum. Integer ac molestie dolor. Nam interdum augue at consequat scelerisque. Maecenas sed libero et ante cursus condimentum et a libero. Nam gravida lacus enim, eget molestie lacus imperdiet quis. Nulla justo risus, egestas a ornare non, blandit vel eros. Nulla eget maximus eros. Aenean pharetra lorem et vehicula convallis. In consequat egestas commodo. Pellentesque vehicula aliquam nibh a pharetra. Proin dui velit, tempus ut feugiat at, faucibus quis elit.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (12, 12, '2017-12-01', 'Phasellus vestibulum sodales massa ac vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at facilisis nulla. Mauris a aliquet ante, euismod gravida mauris. Nam hendrerit vitae eros vitae accumsan. Nullam in turpis libero. Praesent commodo quis urna at pharetra. Aliquam mauris nisi, vulputate ut mauris ut, sollicitudin molestie justo. Ut ac aliquam magna.', 5, 4, 3, 2, 1, 2);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (13, 13, '2017-12-01', 'Vestibulum id imperdiet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sagittis augue ac venenatis faucibus. Curabitur in est egestas, euismod justo in, lobortis dolor. Etiam maximus ex nec consectetur molestie. Vestibulum dolor est, dignissim ac leo et, consectetur sagittis ligula. Nulla vehicula convallis hendrerit. In posuere porta commodo.', 3, 4, 5, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (14, 14, '2017-12-01', 'Ut eu lorem risus. Curabitur mattis venenatis quam, eu ultrices mi venenatis a. Aliquam sollicitudin augue non est pulvinar, vel laoreet justo bibendum. Curabitur quis purus diam. Vivamus tempus orci at sagittis luctus. Nullam mauris ipsum, gravida pulvinar consequat vehicula, ornare id enim. Cras cursus mauris id erat varius, quis gravida ipsum mollis. Aenean ligula diam, ultrices id imperdiet vitae, malesuada sit amet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis elit arcu. Sed semper tellus velit, sit amet tristique quam lobortis imperdiet. Phasellus id posuere turpis. Aliquam ut lacus eu nisi hendrerit vulputate.', 4, 5, 1, 2, 3, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (15, 15, '2017-12-01', 'Donec consectetur eleifend lacus nec feugiat. Praesent vel orci ante. Aenean cursus, ante non commodo consectetur, lacus augue efficitur massa, at fringilla orci eros in elit. Proin ultrices tortor nunc, eget vehicula erat posuere eget. In interdum neque ac sem convallis hendrerit. Cras egestas sollicitudin mattis. Vivamus gravida purus sit amet consectetur tempor. Ut elit orci, iaculis a congue sed, suscipit at ex. Quisque at lacus eu tellus congue rutrum euismod eu leo. Morbi blandit sapien erat, a scelerisque lorem iaculis non. Nunc ultrices justo vel elit porttitor rutrum. Nulla suscipit ex sapien, ut bibendum erat imperdiet id. Quisque sit amet felis rutrum, iaculis ante convallis, semper tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum maximus fermentum.', 5, 4, 3, 2, 1, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (16, 16, '2017-12-01', 'In venenatis eget nisl eget commodo. Nunc tempus est non feugiat elementum. Vestibulum viverra, ipsum quis vulputate consequat, libero nunc porttitor libero, at molestie erat risus convallis ligula. Curabitur vitae posuere sapien, quis eleifend est. Nam placerat tortor ac massa tincidunt varius. Donec ut pretium risus, eu condimentum enim. Aliquam rhoncus ante magna, sit amet elementum mi feugiat a. Mauris suscipit urna quis ipsum auctor, non ullamcorper mi commodo. Maecenas in hendrerit est. Nulla rhoncus congue posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 3, 2, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (17, 17, '2017-12-01', 'Nunc in sollicitudin tellus. Ut bibendum quam eget lectus ultricies molestie. Nulla sit amet imperdiet enim, vitae porta magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nisl a nisi lobortis vestibulum. Sed id justo dictum elit venenatis tempor. Mauris elementum massa enim, id pulvinar odio mattis sed. Nunc suscipit erat nec ex aliquet mollis. Vestibulum vel sodales mi, vitae sollicitudin magna. Quisque mollis, leo quis egestas semper, nisi elit interdum mauris, eu euismod est nulla at libero. Proin ut nisl at mauris mattis tristique.', 4, 5, 4, 3, 2, 1);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (18, 18, '2017-12-01', 'Curabitur consequat dolor quis orci imperdiet tristique. Nunc eu purus eu tellus facilisis vestibulum fermentum ut erat. Aenean varius auctor urna, in porttitor lectus tempor pulvinar. Vivamus felis mauris, maximus eget massa in, ullamcorper finibus quam. Aenean nibh dui, commodo sed metus et, laoreet placerat nunc. Maecenas iaculis justo lectus, tincidunt posuere ante tempor quis. Aenean ligula nulla, pharetra id est eleifend, cursus auctor eros. Quisque ut porta leo. Duis lacus odio, tempor at nisi at, pellentesque accumsan felis. Nulla luctus dui mattis urna egestas commodo. Fusce quis luctus tortor.', 2, 3, 4, 5, 4, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (19, 19, '2017-12-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue, dolor nec dictum accumsan, purus velit rhoncus justo, consequat hendrerit felis eros quis justo. Proin commodo malesuada libero. Aenean pharetra est eu maximus consequat. Etiam mattis et mi in pulvinar. Etiam rhoncus urna non est ultricies, vitae gravida est congue. Morbi lacinia nibh eget interdum vestibulum. Aliquam vitae metus sed enim pretium malesuada ac vel nibh. Duis tempus pharetra lectus. Nulla sit amet maximus felis.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (20, 20, '2017-12-01', 'Vestibulum ex ante, blandit et lacus tincidunt, pulvinar mattis lorem. Ut condimentum sem risus, vel pulvinar turpis vulputate at. Nullam accumsan sit amet ex non semper. Vestibulum quis bibendum metus. Curabitur non nulla velit. Proin porttitor nibh id dolor convallis ullamcorper. Morbi accumsan nec odio at sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed finibus tincidunt vehicula. In feugiat magna nec massa sollicitudin maximus eu in nisi.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (21, 21, '2018-01-01', 'Nunc vitae cursus nulla, vitae mollis ligula. Praesent vitae erat non sapien iaculis blandit. Mauris porta bibendum magna et commodo. Pellentesque laoreet felis eu leo tempus rutrum. Integer ac molestie dolor. Nam interdum augue at consequat scelerisque. Maecenas sed libero et ante cursus condimentum et a libero. Nam gravida lacus enim, eget molestie lacus imperdiet quis. Nulla justo risus, egestas a ornare non, blandit vel eros. Nulla eget maximus eros. Aenean pharetra lorem et vehicula convallis. In consequat egestas commodo. Pellentesque vehicula aliquam nibh a pharetra. Proin dui velit, tempus ut feugiat at, faucibus quis elit.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (22, 22, '2018-01-01', 'Phasellus vestibulum sodales massa ac vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at facilisis nulla. Mauris a aliquet ante, euismod gravida mauris. Nam hendrerit vitae eros vitae accumsan. Nullam in turpis libero. Praesent commodo quis urna at pharetra. Aliquam mauris nisi, vulputate ut mauris ut, sollicitudin molestie justo. Ut ac aliquam magna.', 5, 4, 3, 2, 1, 2);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (23, 23, '2018-01-01', 'Vestibulum id imperdiet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sagittis augue ac venenatis faucibus. Curabitur in est egestas, euismod justo in, lobortis dolor. Etiam maximus ex nec consectetur molestie. Vestibulum dolor est, dignissim ac leo et, consectetur sagittis ligula. Nulla vehicula convallis hendrerit. In posuere porta commodo.', 3, 4, 5, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (24, 24, '2018-01-01', 'Ut eu lorem risus. Curabitur mattis venenatis quam, eu ultrices mi venenatis a. Aliquam sollicitudin augue non est pulvinar, vel laoreet justo bibendum. Curabitur quis purus diam. Vivamus tempus orci at sagittis luctus. Nullam mauris ipsum, gravida pulvinar consequat vehicula, ornare id enim. Cras cursus mauris id erat varius, quis gravida ipsum mollis. Aenean ligula diam, ultrices id imperdiet vitae, malesuada sit amet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis elit arcu. Sed semper tellus velit, sit amet tristique quam lobortis imperdiet. Phasellus id posuere turpis. Aliquam ut lacus eu nisi hendrerit vulputate.', 4, 5, 1, 2, 3, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (25, 25, '2018-01-01', 'Donec consectetur eleifend lacus nec feugiat. Praesent vel orci ante. Aenean cursus, ante non commodo consectetur, lacus augue efficitur massa, at fringilla orci eros in elit. Proin ultrices tortor nunc, eget vehicula erat posuere eget. In interdum neque ac sem convallis hendrerit. Cras egestas sollicitudin mattis. Vivamus gravida purus sit amet consectetur tempor. Ut elit orci, iaculis a congue sed, suscipit at ex. Quisque at lacus eu tellus congue rutrum euismod eu leo. Morbi blandit sapien erat, a scelerisque lorem iaculis non. Nunc ultrices justo vel elit porttitor rutrum. Nulla suscipit ex sapien, ut bibendum erat imperdiet id. Quisque sit amet felis rutrum, iaculis ante convallis, semper tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum maximus fermentum.', 5, 4, 3, 2, 1, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (26, 26, '2018-01-01', 'In venenatis eget nisl eget commodo. Nunc tempus est non feugiat elementum. Vestibulum viverra, ipsum quis vulputate consequat, libero nunc porttitor libero, at molestie erat risus convallis ligula. Curabitur vitae posuere sapien, quis eleifend est. Nam placerat tortor ac massa tincidunt varius. Donec ut pretium risus, eu condimentum enim. Aliquam rhoncus ante magna, sit amet elementum mi feugiat a. Mauris suscipit urna quis ipsum auctor, non ullamcorper mi commodo. Maecenas in hendrerit est. Nulla rhoncus congue posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 3, 2, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (27, 27, '2018-01-01', 'Nunc in sollicitudin tellus. Ut bibendum quam eget lectus ultricies molestie. Nulla sit amet imperdiet enim, vitae porta magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nisl a nisi lobortis vestibulum. Sed id justo dictum elit venenatis tempor. Mauris elementum massa enim, id pulvinar odio mattis sed. Nunc suscipit erat nec ex aliquet mollis. Vestibulum vel sodales mi, vitae sollicitudin magna. Quisque mollis, leo quis egestas semper, nisi elit interdum mauris, eu euismod est nulla at libero. Proin ut nisl at mauris mattis tristique.', 4, 5, 4, 3, 2, 1);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (28, 28, '2018-01-01', 'Curabitur consequat dolor quis orci imperdiet tristique. Nunc eu purus eu tellus facilisis vestibulum fermentum ut erat. Aenean varius auctor urna, in porttitor lectus tempor pulvinar. Vivamus felis mauris, maximus eget massa in, ullamcorper finibus quam. Aenean nibh dui, commodo sed metus et, laoreet placerat nunc. Maecenas iaculis justo lectus, tincidunt posuere ante tempor quis. Aenean ligula nulla, pharetra id est eleifend, cursus auctor eros. Quisque ut porta leo. Duis lacus odio, tempor at nisi at, pellentesque accumsan felis. Nulla luctus dui mattis urna egestas commodo. Fusce quis luctus tortor.', 2, 3, 4, 5, 4, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (29, 29, '2018-01-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue, dolor nec dictum accumsan, purus velit rhoncus justo, consequat hendrerit felis eros quis justo. Proin commodo malesuada libero. Aenean pharetra est eu maximus consequat. Etiam mattis et mi in pulvinar. Etiam rhoncus urna non est ultricies, vitae gravida est congue. Morbi lacinia nibh eget interdum vestibulum. Aliquam vitae metus sed enim pretium malesuada ac vel nibh. Duis tempus pharetra lectus. Nulla sit amet maximus felis.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (30, 30, '2018-01-01', 'Vestibulum ex ante, blandit et lacus tincidunt, pulvinar mattis lorem. Ut condimentum sem risus, vel pulvinar turpis vulputate at. Nullam accumsan sit amet ex non semper. Vestibulum quis bibendum metus. Curabitur non nulla velit. Proin porttitor nibh id dolor convallis ullamcorper. Morbi accumsan nec odio at sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed finibus tincidunt vehicula. In feugiat magna nec massa sollicitudin maximus eu in nisi.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (31, 31, '2018-02-01', 'Nunc vitae cursus nulla, vitae mollis ligula. Praesent vitae erat non sapien iaculis blandit. Mauris porta bibendum magna et commodo. Pellentesque laoreet felis eu leo tempus rutrum. Integer ac molestie dolor. Nam interdum augue at consequat scelerisque. Maecenas sed libero et ante cursus condimentum et a libero. Nam gravida lacus enim, eget molestie lacus imperdiet quis. Nulla justo risus, egestas a ornare non, blandit vel eros. Nulla eget maximus eros. Aenean pharetra lorem et vehicula convallis. In consequat egestas commodo. Pellentesque vehicula aliquam nibh a pharetra. Proin dui velit, tempus ut feugiat at, faucibus quis elit.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (32, 32, '2018-02-01', 'Phasellus vestibulum sodales massa ac vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at facilisis nulla. Mauris a aliquet ante, euismod gravida mauris. Nam hendrerit vitae eros vitae accumsan. Nullam in turpis libero. Praesent commodo quis urna at pharetra. Aliquam mauris nisi, vulputate ut mauris ut, sollicitudin molestie justo. Ut ac aliquam magna.', 5, 4, 3, 2, 1, 2);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (33, 33, '2018-02-01', 'Vestibulum id imperdiet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sagittis augue ac venenatis faucibus. Curabitur in est egestas, euismod justo in, lobortis dolor. Etiam maximus ex nec consectetur molestie. Vestibulum dolor est, dignissim ac leo et, consectetur sagittis ligula. Nulla vehicula convallis hendrerit. In posuere porta commodo.', 3, 4, 5, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (34, 34, '2018-02-01', 'Ut eu lorem risus. Curabitur mattis venenatis quam, eu ultrices mi venenatis a. Aliquam sollicitudin augue non est pulvinar, vel laoreet justo bibendum. Curabitur quis purus diam. Vivamus tempus orci at sagittis luctus. Nullam mauris ipsum, gravida pulvinar consequat vehicula, ornare id enim. Cras cursus mauris id erat varius, quis gravida ipsum mollis. Aenean ligula diam, ultrices id imperdiet vitae, malesuada sit amet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis elit arcu. Sed semper tellus velit, sit amet tristique quam lobortis imperdiet. Phasellus id posuere turpis. Aliquam ut lacus eu nisi hendrerit vulputate.', 4, 5, 1, 2, 3, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (35, 35, '2018-02-01', 'Donec consectetur eleifend lacus nec feugiat. Praesent vel orci ante. Aenean cursus, ante non commodo consectetur, lacus augue efficitur massa, at fringilla orci eros in elit. Proin ultrices tortor nunc, eget vehicula erat posuere eget. In interdum neque ac sem convallis hendrerit. Cras egestas sollicitudin mattis. Vivamus gravida purus sit amet consectetur tempor. Ut elit orci, iaculis a congue sed, suscipit at ex. Quisque at lacus eu tellus congue rutrum euismod eu leo. Morbi blandit sapien erat, a scelerisque lorem iaculis non. Nunc ultrices justo vel elit porttitor rutrum. Nulla suscipit ex sapien, ut bibendum erat imperdiet id. Quisque sit amet felis rutrum, iaculis ante convallis, semper tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum maximus fermentum.', 5, 4, 3, 2, 1, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (36, 36, '2018-02-01', 'In venenatis eget nisl eget commodo. Nunc tempus est non feugiat elementum. Vestibulum viverra, ipsum quis vulputate consequat, libero nunc porttitor libero, at molestie erat risus convallis ligula. Curabitur vitae posuere sapien, quis eleifend est. Nam placerat tortor ac massa tincidunt varius. Donec ut pretium risus, eu condimentum enim. Aliquam rhoncus ante magna, sit amet elementum mi feugiat a. Mauris suscipit urna quis ipsum auctor, non ullamcorper mi commodo. Maecenas in hendrerit est. Nulla rhoncus congue posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 3, 2, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (37, 37, '2018-02-01', 'Nunc in sollicitudin tellus. Ut bibendum quam eget lectus ultricies molestie. Nulla sit amet imperdiet enim, vitae porta magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nisl a nisi lobortis vestibulum. Sed id justo dictum elit venenatis tempor. Mauris elementum massa enim, id pulvinar odio mattis sed. Nunc suscipit erat nec ex aliquet mollis. Vestibulum vel sodales mi, vitae sollicitudin magna. Quisque mollis, leo quis egestas semper, nisi elit interdum mauris, eu euismod est nulla at libero. Proin ut nisl at mauris mattis tristique.', 4, 5, 4, 3, 2, 1);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (38, 38, '2018-02-01', 'Curabitur consequat dolor quis orci imperdiet tristique. Nunc eu purus eu tellus facilisis vestibulum fermentum ut erat. Aenean varius auctor urna, in porttitor lectus tempor pulvinar. Vivamus felis mauris, maximus eget massa in, ullamcorper finibus quam. Aenean nibh dui, commodo sed metus et, laoreet placerat nunc. Maecenas iaculis justo lectus, tincidunt posuere ante tempor quis. Aenean ligula nulla, pharetra id est eleifend, cursus auctor eros. Quisque ut porta leo. Duis lacus odio, tempor at nisi at, pellentesque accumsan felis. Nulla luctus dui mattis urna egestas commodo. Fusce quis luctus tortor.', 2, 3, 4, 5, 4, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (39, 39, '2018-02-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue, dolor nec dictum accumsan, purus velit rhoncus justo, consequat hendrerit felis eros quis justo. Proin commodo malesuada libero. Aenean pharetra est eu maximus consequat. Etiam mattis et mi in pulvinar. Etiam rhoncus urna non est ultricies, vitae gravida est congue. Morbi lacinia nibh eget interdum vestibulum. Aliquam vitae metus sed enim pretium malesuada ac vel nibh. Duis tempus pharetra lectus. Nulla sit amet maximus felis.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (40, 40, '2018-03-01', 'Vestibulum ex ante, blandit et lacus tincidunt, pulvinar mattis lorem. Ut condimentum sem risus, vel pulvinar turpis vulputate at. Nullam accumsan sit amet ex non semper. Vestibulum quis bibendum metus. Curabitur non nulla velit. Proin porttitor nibh id dolor convallis ullamcorper. Morbi accumsan nec odio at sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed finibus tincidunt vehicula. In feugiat magna nec massa sollicitudin maximus eu in nisi.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (41, 41, '2018-03-01', 'Nunc vitae cursus nulla, vitae mollis ligula. Praesent vitae erat non sapien iaculis blandit. Mauris porta bibendum magna et commodo. Pellentesque laoreet felis eu leo tempus rutrum. Integer ac molestie dolor. Nam interdum augue at consequat scelerisque. Maecenas sed libero et ante cursus condimentum et a libero. Nam gravida lacus enim, eget molestie lacus imperdiet quis. Nulla justo risus, egestas a ornare non, blandit vel eros. Nulla eget maximus eros. Aenean pharetra lorem et vehicula convallis. In consequat egestas commodo. Pellentesque vehicula aliquam nibh a pharetra. Proin dui velit, tempus ut feugiat at, faucibus quis elit.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (42, 42, '2018-03-01', 'Phasellus vestibulum sodales massa ac vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at facilisis nulla. Mauris a aliquet ante, euismod gravida mauris. Nam hendrerit vitae eros vitae accumsan. Nullam in turpis libero. Praesent commodo quis urna at pharetra. Aliquam mauris nisi, vulputate ut mauris ut, sollicitudin molestie justo. Ut ac aliquam magna.', 5, 4, 3, 2, 1, 2);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (43, 43, '2018-03-01', 'Vestibulum id imperdiet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sagittis augue ac venenatis faucibus. Curabitur in est egestas, euismod justo in, lobortis dolor. Etiam maximus ex nec consectetur molestie. Vestibulum dolor est, dignissim ac leo et, consectetur sagittis ligula. Nulla vehicula convallis hendrerit. In posuere porta commodo.', 3, 4, 5, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (44, 44, '2018-03-01', 'Ut eu lorem risus. Curabitur mattis venenatis quam, eu ultrices mi venenatis a. Aliquam sollicitudin augue non est pulvinar, vel laoreet justo bibendum. Curabitur quis purus diam. Vivamus tempus orci at sagittis luctus. Nullam mauris ipsum, gravida pulvinar consequat vehicula, ornare id enim. Cras cursus mauris id erat varius, quis gravida ipsum mollis. Aenean ligula diam, ultrices id imperdiet vitae, malesuada sit amet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis elit arcu. Sed semper tellus velit, sit amet tristique quam lobortis imperdiet. Phasellus id posuere turpis. Aliquam ut lacus eu nisi hendrerit vulputate.', 4, 5, 1, 2, 3, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (45, 45, '2018-03-01', 'Donec consectetur eleifend lacus nec feugiat. Praesent vel orci ante. Aenean cursus, ante non commodo consectetur, lacus augue efficitur massa, at fringilla orci eros in elit. Proin ultrices tortor nunc, eget vehicula erat posuere eget. In interdum neque ac sem convallis hendrerit. Cras egestas sollicitudin mattis. Vivamus gravida purus sit amet consectetur tempor. Ut elit orci, iaculis a congue sed, suscipit at ex. Quisque at lacus eu tellus congue rutrum euismod eu leo. Morbi blandit sapien erat, a scelerisque lorem iaculis non. Nunc ultrices justo vel elit porttitor rutrum. Nulla suscipit ex sapien, ut bibendum erat imperdiet id. Quisque sit amet felis rutrum, iaculis ante convallis, semper tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum maximus fermentum.', 5, 4, 3, 2, 1, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (46, 46, '2018-03-01', 'In venenatis eget nisl eget commodo. Nunc tempus est non feugiat elementum. Vestibulum viverra, ipsum quis vulputate consequat, libero nunc porttitor libero, at molestie erat risus convallis ligula. Curabitur vitae posuere sapien, quis eleifend est. Nam placerat tortor ac massa tincidunt varius. Donec ut pretium risus, eu condimentum enim. Aliquam rhoncus ante magna, sit amet elementum mi feugiat a. Mauris suscipit urna quis ipsum auctor, non ullamcorper mi commodo. Maecenas in hendrerit est. Nulla rhoncus congue posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 3, 2, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (47, 47, '2018-03-01', 'Nunc in sollicitudin tellus. Ut bibendum quam eget lectus ultricies molestie. Nulla sit amet imperdiet enim, vitae porta magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nisl a nisi lobortis vestibulum. Sed id justo dictum elit venenatis tempor. Mauris elementum massa enim, id pulvinar odio mattis sed. Nunc suscipit erat nec ex aliquet mollis. Vestibulum vel sodales mi, vitae sollicitudin magna. Quisque mollis, leo quis egestas semper, nisi elit interdum mauris, eu euismod est nulla at libero. Proin ut nisl at mauris mattis tristique.', 4, 5, 4, 3, 2, 1);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (48, 48, '2018-03-01', 'Curabitur consequat dolor quis orci imperdiet tristique. Nunc eu purus eu tellus facilisis vestibulum fermentum ut erat. Aenean varius auctor urna, in porttitor lectus tempor pulvinar. Vivamus felis mauris, maximus eget massa in, ullamcorper finibus quam. Aenean nibh dui, commodo sed metus et, laoreet placerat nunc. Maecenas iaculis justo lectus, tincidunt posuere ante tempor quis. Aenean ligula nulla, pharetra id est eleifend, cursus auctor eros. Quisque ut porta leo. Duis lacus odio, tempor at nisi at, pellentesque accumsan felis. Nulla luctus dui mattis urna egestas commodo. Fusce quis luctus tortor.', 2, 3, 4, 5, 4, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (49, 49, '2018-03-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue, dolor nec dictum accumsan, purus velit rhoncus justo, consequat hendrerit felis eros quis justo. Proin commodo malesuada libero. Aenean pharetra est eu maximus consequat. Etiam mattis et mi in pulvinar. Etiam rhoncus urna non est ultricies, vitae gravida est congue. Morbi lacinia nibh eget interdum vestibulum. Aliquam vitae metus sed enim pretium malesuada ac vel nibh. Duis tempus pharetra lectus. Nulla sit amet maximus felis.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (50, 50, '2018-04-01', 'Vestibulum ex ante, blandit et lacus tincidunt, pulvinar mattis lorem. Ut condimentum sem risus, vel pulvinar turpis vulputate at. Nullam accumsan sit amet ex non semper. Vestibulum quis bibendum metus. Curabitur non nulla velit. Proin porttitor nibh id dolor convallis ullamcorper. Morbi accumsan nec odio at sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed finibus tincidunt vehicula. In feugiat magna nec massa sollicitudin maximus eu in nisi.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (51, 51, '2018-04-01', 'Nunc vitae cursus nulla, vitae mollis ligula. Praesent vitae erat non sapien iaculis blandit. Mauris porta bibendum magna et commodo. Pellentesque laoreet felis eu leo tempus rutrum. Integer ac molestie dolor. Nam interdum augue at consequat scelerisque. Maecenas sed libero et ante cursus condimentum et a libero. Nam gravida lacus enim, eget molestie lacus imperdiet quis. Nulla justo risus, egestas a ornare non, blandit vel eros. Nulla eget maximus eros. Aenean pharetra lorem et vehicula convallis. In consequat egestas commodo. Pellentesque vehicula aliquam nibh a pharetra. Proin dui velit, tempus ut feugiat at, faucibus quis elit.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (52, 52, '2018-04-01', 'Phasellus vestibulum sodales massa ac vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at facilisis nulla. Mauris a aliquet ante, euismod gravida mauris. Nam hendrerit vitae eros vitae accumsan. Nullam in turpis libero. Praesent commodo quis urna at pharetra. Aliquam mauris nisi, vulputate ut mauris ut, sollicitudin molestie justo. Ut ac aliquam magna.', 5, 4, 3, 2, 1, 2);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (53, 53, '2018-04-01', 'Vestibulum id imperdiet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sagittis augue ac venenatis faucibus. Curabitur in est egestas, euismod justo in, lobortis dolor. Etiam maximus ex nec consectetur molestie. Vestibulum dolor est, dignissim ac leo et, consectetur sagittis ligula. Nulla vehicula convallis hendrerit. In posuere porta commodo.', 3, 4, 5, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (54, 54, '2018-04-01', 'Ut eu lorem risus. Curabitur mattis venenatis quam, eu ultrices mi venenatis a. Aliquam sollicitudin augue non est pulvinar, vel laoreet justo bibendum. Curabitur quis purus diam. Vivamus tempus orci at sagittis luctus. Nullam mauris ipsum, gravida pulvinar consequat vehicula, ornare id enim. Cras cursus mauris id erat varius, quis gravida ipsum mollis. Aenean ligula diam, ultrices id imperdiet vitae, malesuada sit amet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis elit arcu. Sed semper tellus velit, sit amet tristique quam lobortis imperdiet. Phasellus id posuere turpis. Aliquam ut lacus eu nisi hendrerit vulputate.', 4, 5, 1, 2, 3, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (55, 55, '2018-04-01', 'Donec consectetur eleifend lacus nec feugiat. Praesent vel orci ante. Aenean cursus, ante non commodo consectetur, lacus augue efficitur massa, at fringilla orci eros in elit. Proin ultrices tortor nunc, eget vehicula erat posuere eget. In interdum neque ac sem convallis hendrerit. Cras egestas sollicitudin mattis. Vivamus gravida purus sit amet consectetur tempor. Ut elit orci, iaculis a congue sed, suscipit at ex. Quisque at lacus eu tellus congue rutrum euismod eu leo. Morbi blandit sapien erat, a scelerisque lorem iaculis non. Nunc ultrices justo vel elit porttitor rutrum. Nulla suscipit ex sapien, ut bibendum erat imperdiet id. Quisque sit amet felis rutrum, iaculis ante convallis, semper tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum maximus fermentum.', 5, 4, 3, 2, 1, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (56, 56, '2018-04-01', 'In venenatis eget nisl eget commodo. Nunc tempus est non feugiat elementum. Vestibulum viverra, ipsum quis vulputate consequat, libero nunc porttitor libero, at molestie erat risus convallis ligula. Curabitur vitae posuere sapien, quis eleifend est. Nam placerat tortor ac massa tincidunt varius. Donec ut pretium risus, eu condimentum enim. Aliquam rhoncus ante magna, sit amet elementum mi feugiat a. Mauris suscipit urna quis ipsum auctor, non ullamcorper mi commodo. Maecenas in hendrerit est. Nulla rhoncus congue posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 3, 2, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (57, 57, '2018-04-01', 'Nunc in sollicitudin tellus. Ut bibendum quam eget lectus ultricies molestie. Nulla sit amet imperdiet enim, vitae porta magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nisl a nisi lobortis vestibulum. Sed id justo dictum elit venenatis tempor. Mauris elementum massa enim, id pulvinar odio mattis sed. Nunc suscipit erat nec ex aliquet mollis. Vestibulum vel sodales mi, vitae sollicitudin magna. Quisque mollis, leo quis egestas semper, nisi elit interdum mauris, eu euismod est nulla at libero. Proin ut nisl at mauris mattis tristique.', 4, 5, 4, 3, 2, 1);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (58, 58, '2018-04-01', 'Curabitur consequat dolor quis orci imperdiet tristique. Nunc eu purus eu tellus facilisis vestibulum fermentum ut erat. Aenean varius auctor urna, in porttitor lectus tempor pulvinar. Vivamus felis mauris, maximus eget massa in, ullamcorper finibus quam. Aenean nibh dui, commodo sed metus et, laoreet placerat nunc. Maecenas iaculis justo lectus, tincidunt posuere ante tempor quis. Aenean ligula nulla, pharetra id est eleifend, cursus auctor eros. Quisque ut porta leo. Duis lacus odio, tempor at nisi at, pellentesque accumsan felis. Nulla luctus dui mattis urna egestas commodo. Fusce quis luctus tortor.', 2, 3, 4, 5, 4, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (59, 59, '2018-04-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue, dolor nec dictum accumsan, purus velit rhoncus justo, consequat hendrerit felis eros quis justo. Proin commodo malesuada libero. Aenean pharetra est eu maximus consequat. Etiam mattis et mi in pulvinar. Etiam rhoncus urna non est ultricies, vitae gravida est congue. Morbi lacinia nibh eget interdum vestibulum. Aliquam vitae metus sed enim pretium malesuada ac vel nibh. Duis tempus pharetra lectus. Nulla sit amet maximus felis.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (60, 60, '2018-04-01', 'Vestibulum ex ante, blandit et lacus tincidunt, pulvinar mattis lorem. Ut condimentum sem risus, vel pulvinar turpis vulputate at. Nullam accumsan sit amet ex non semper. Vestibulum quis bibendum metus. Curabitur non nulla velit. Proin porttitor nibh id dolor convallis ullamcorper. Morbi accumsan nec odio at sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed finibus tincidunt vehicula. In feugiat magna nec massa sollicitudin maximus eu in nisi.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (61, 61, '2018-05-01', 'Nunc vitae cursus nulla, vitae mollis ligula. Praesent vitae erat non sapien iaculis blandit. Mauris porta bibendum magna et commodo. Pellentesque laoreet felis eu leo tempus rutrum. Integer ac molestie dolor. Nam interdum augue at consequat scelerisque. Maecenas sed libero et ante cursus condimentum et a libero. Nam gravida lacus enim, eget molestie lacus imperdiet quis. Nulla justo risus, egestas a ornare non, blandit vel eros. Nulla eget maximus eros. Aenean pharetra lorem et vehicula convallis. In consequat egestas commodo. Pellentesque vehicula aliquam nibh a pharetra. Proin dui velit, tempus ut feugiat at, faucibus quis elit.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (62, 62, '2018-05-01', 'Phasellus vestibulum sodales massa ac vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at facilisis nulla. Mauris a aliquet ante, euismod gravida mauris. Nam hendrerit vitae eros vitae accumsan. Nullam in turpis libero. Praesent commodo quis urna at pharetra. Aliquam mauris nisi, vulputate ut mauris ut, sollicitudin molestie justo. Ut ac aliquam magna.', 5, 4, 3, 2, 1, 2);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (63, 63, '2018-05-01', 'Vestibulum id imperdiet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sagittis augue ac venenatis faucibus. Curabitur in est egestas, euismod justo in, lobortis dolor. Etiam maximus ex nec consectetur molestie. Vestibulum dolor est, dignissim ac leo et, consectetur sagittis ligula. Nulla vehicula convallis hendrerit. In posuere porta commodo.', 3, 4, 5, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (64, 64, '2018-05-01', 'Ut eu lorem risus. Curabitur mattis venenatis quam, eu ultrices mi venenatis a. Aliquam sollicitudin augue non est pulvinar, vel laoreet justo bibendum. Curabitur quis purus diam. Vivamus tempus orci at sagittis luctus. Nullam mauris ipsum, gravida pulvinar consequat vehicula, ornare id enim. Cras cursus mauris id erat varius, quis gravida ipsum mollis. Aenean ligula diam, ultrices id imperdiet vitae, malesuada sit amet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis elit arcu. Sed semper tellus velit, sit amet tristique quam lobortis imperdiet. Phasellus id posuere turpis. Aliquam ut lacus eu nisi hendrerit vulputate.', 4, 5, 1, 2, 3, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (65, 65, '2018-05-01', 'Donec consectetur eleifend lacus nec feugiat. Praesent vel orci ante. Aenean cursus, ante non commodo consectetur, lacus augue efficitur massa, at fringilla orci eros in elit. Proin ultrices tortor nunc, eget vehicula erat posuere eget. In interdum neque ac sem convallis hendrerit. Cras egestas sollicitudin mattis. Vivamus gravida purus sit amet consectetur tempor. Ut elit orci, iaculis a congue sed, suscipit at ex. Quisque at lacus eu tellus congue rutrum euismod eu leo. Morbi blandit sapien erat, a scelerisque lorem iaculis non. Nunc ultrices justo vel elit porttitor rutrum. Nulla suscipit ex sapien, ut bibendum erat imperdiet id. Quisque sit amet felis rutrum, iaculis ante convallis, semper tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum maximus fermentum.', 5, 4, 3, 2, 1, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (66, 66, '2018-05-01', 'In venenatis eget nisl eget commodo. Nunc tempus est non feugiat elementum. Vestibulum viverra, ipsum quis vulputate consequat, libero nunc porttitor libero, at molestie erat risus convallis ligula. Curabitur vitae posuere sapien, quis eleifend est. Nam placerat tortor ac massa tincidunt varius. Donec ut pretium risus, eu condimentum enim. Aliquam rhoncus ante magna, sit amet elementum mi feugiat a. Mauris suscipit urna quis ipsum auctor, non ullamcorper mi commodo. Maecenas in hendrerit est. Nulla rhoncus congue posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 3, 2, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (67, 67, '2018-05-01', 'Nunc in sollicitudin tellus. Ut bibendum quam eget lectus ultricies molestie. Nulla sit amet imperdiet enim, vitae porta magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nisl a nisi lobortis vestibulum. Sed id justo dictum elit venenatis tempor. Mauris elementum massa enim, id pulvinar odio mattis sed. Nunc suscipit erat nec ex aliquet mollis. Vestibulum vel sodales mi, vitae sollicitudin magna. Quisque mollis, leo quis egestas semper, nisi elit interdum mauris, eu euismod est nulla at libero. Proin ut nisl at mauris mattis tristique.', 4, 5, 4, 3, 2, 1);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (68, 68, '2018-05-01', 'Curabitur consequat dolor quis orci imperdiet tristique. Nunc eu purus eu tellus facilisis vestibulum fermentum ut erat. Aenean varius auctor urna, in porttitor lectus tempor pulvinar. Vivamus felis mauris, maximus eget massa in, ullamcorper finibus quam. Aenean nibh dui, commodo sed metus et, laoreet placerat nunc. Maecenas iaculis justo lectus, tincidunt posuere ante tempor quis. Aenean ligula nulla, pharetra id est eleifend, cursus auctor eros. Quisque ut porta leo. Duis lacus odio, tempor at nisi at, pellentesque accumsan felis. Nulla luctus dui mattis urna egestas commodo. Fusce quis luctus tortor.', 2, 3, 4, 5, 4, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (69, 69, '2018-05-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue, dolor nec dictum accumsan, purus velit rhoncus justo, consequat hendrerit felis eros quis justo. Proin commodo malesuada libero. Aenean pharetra est eu maximus consequat. Etiam mattis et mi in pulvinar. Etiam rhoncus urna non est ultricies, vitae gravida est congue. Morbi lacinia nibh eget interdum vestibulum. Aliquam vitae metus sed enim pretium malesuada ac vel nibh. Duis tempus pharetra lectus. Nulla sit amet maximus felis.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (70, 70, '2018-06-01', 'Vestibulum ex ante, blandit et lacus tincidunt, pulvinar mattis lorem. Ut condimentum sem risus, vel pulvinar turpis vulputate at. Nullam accumsan sit amet ex non semper. Vestibulum quis bibendum metus. Curabitur non nulla velit. Proin porttitor nibh id dolor convallis ullamcorper. Morbi accumsan nec odio at sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed finibus tincidunt vehicula. In feugiat magna nec massa sollicitudin maximus eu in nisi.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (71, 71, '2018-06-01', 'Nunc vitae cursus nulla, vitae mollis ligula. Praesent vitae erat non sapien iaculis blandit. Mauris porta bibendum magna et commodo. Pellentesque laoreet felis eu leo tempus rutrum. Integer ac molestie dolor. Nam interdum augue at consequat scelerisque. Maecenas sed libero et ante cursus condimentum et a libero. Nam gravida lacus enim, eget molestie lacus imperdiet quis. Nulla justo risus, egestas a ornare non, blandit vel eros. Nulla eget maximus eros. Aenean pharetra lorem et vehicula convallis. In consequat egestas commodo. Pellentesque vehicula aliquam nibh a pharetra. Proin dui velit, tempus ut feugiat at, faucibus quis elit.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (72, 72, '2018-06-01', 'Phasellus vestibulum sodales massa ac vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at facilisis nulla. Mauris a aliquet ante, euismod gravida mauris. Nam hendrerit vitae eros vitae accumsan. Nullam in turpis libero. Praesent commodo quis urna at pharetra. Aliquam mauris nisi, vulputate ut mauris ut, sollicitudin molestie justo. Ut ac aliquam magna.', 5, 4, 3, 2, 1, 2);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (73, 73, '2018-06-01', 'Vestibulum id imperdiet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sagittis augue ac venenatis faucibus. Curabitur in est egestas, euismod justo in, lobortis dolor. Etiam maximus ex nec consectetur molestie. Vestibulum dolor est, dignissim ac leo et, consectetur sagittis ligula. Nulla vehicula convallis hendrerit. In posuere porta commodo.', 3, 4, 5, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (74, 74, '2018-06-01', 'Ut eu lorem risus. Curabitur mattis venenatis quam, eu ultrices mi venenatis a. Aliquam sollicitudin augue non est pulvinar, vel laoreet justo bibendum. Curabitur quis purus diam. Vivamus tempus orci at sagittis luctus. Nullam mauris ipsum, gravida pulvinar consequat vehicula, ornare id enim. Cras cursus mauris id erat varius, quis gravida ipsum mollis. Aenean ligula diam, ultrices id imperdiet vitae, malesuada sit amet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis elit arcu. Sed semper tellus velit, sit amet tristique quam lobortis imperdiet. Phasellus id posuere turpis. Aliquam ut lacus eu nisi hendrerit vulputate.', 4, 5, 1, 2, 3, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (75, 75, '2018-06-01', 'Donec consectetur eleifend lacus nec feugiat. Praesent vel orci ante. Aenean cursus, ante non commodo consectetur, lacus augue efficitur massa, at fringilla orci eros in elit. Proin ultrices tortor nunc, eget vehicula erat posuere eget. In interdum neque ac sem convallis hendrerit. Cras egestas sollicitudin mattis. Vivamus gravida purus sit amet consectetur tempor. Ut elit orci, iaculis a congue sed, suscipit at ex. Quisque at lacus eu tellus congue rutrum euismod eu leo. Morbi blandit sapien erat, a scelerisque lorem iaculis non. Nunc ultrices justo vel elit porttitor rutrum. Nulla suscipit ex sapien, ut bibendum erat imperdiet id. Quisque sit amet felis rutrum, iaculis ante convallis, semper tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum maximus fermentum.', 5, 4, 3, 2, 1, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (76, 76, '2018-06-01', 'In venenatis eget nisl eget commodo. Nunc tempus est non feugiat elementum. Vestibulum viverra, ipsum quis vulputate consequat, libero nunc porttitor libero, at molestie erat risus convallis ligula. Curabitur vitae posuere sapien, quis eleifend est. Nam placerat tortor ac massa tincidunt varius. Donec ut pretium risus, eu condimentum enim. Aliquam rhoncus ante magna, sit amet elementum mi feugiat a. Mauris suscipit urna quis ipsum auctor, non ullamcorper mi commodo. Maecenas in hendrerit est. Nulla rhoncus congue posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 3, 2, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (77, 77, '2018-06-01', 'Nunc in sollicitudin tellus. Ut bibendum quam eget lectus ultricies molestie. Nulla sit amet imperdiet enim, vitae porta magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nisl a nisi lobortis vestibulum. Sed id justo dictum elit venenatis tempor. Mauris elementum massa enim, id pulvinar odio mattis sed. Nunc suscipit erat nec ex aliquet mollis. Vestibulum vel sodales mi, vitae sollicitudin magna. Quisque mollis, leo quis egestas semper, nisi elit interdum mauris, eu euismod est nulla at libero. Proin ut nisl at mauris mattis tristique.', 4, 5, 4, 3, 2, 1);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (78, 78, '2018-06-01', 'Curabitur consequat dolor quis orci imperdiet tristique. Nunc eu purus eu tellus facilisis vestibulum fermentum ut erat. Aenean varius auctor urna, in porttitor lectus tempor pulvinar. Vivamus felis mauris, maximus eget massa in, ullamcorper finibus quam. Aenean nibh dui, commodo sed metus et, laoreet placerat nunc. Maecenas iaculis justo lectus, tincidunt posuere ante tempor quis. Aenean ligula nulla, pharetra id est eleifend, cursus auctor eros. Quisque ut porta leo. Duis lacus odio, tempor at nisi at, pellentesque accumsan felis. Nulla luctus dui mattis urna egestas commodo. Fusce quis luctus tortor.', 2, 3, 4, 5, 4, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (79, 79, '2018-06-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue, dolor nec dictum accumsan, purus velit rhoncus justo, consequat hendrerit felis eros quis justo. Proin commodo malesuada libero. Aenean pharetra est eu maximus consequat. Etiam mattis et mi in pulvinar. Etiam rhoncus urna non est ultricies, vitae gravida est congue. Morbi lacinia nibh eget interdum vestibulum. Aliquam vitae metus sed enim pretium malesuada ac vel nibh. Duis tempus pharetra lectus. Nulla sit amet maximus felis.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (80, 80, '2018-07-01', 'Vestibulum ex ante, blandit et lacus tincidunt, pulvinar mattis lorem. Ut condimentum sem risus, vel pulvinar turpis vulputate at. Nullam accumsan sit amet ex non semper. Vestibulum quis bibendum metus. Curabitur non nulla velit. Proin porttitor nibh id dolor convallis ullamcorper. Morbi accumsan nec odio at sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed finibus tincidunt vehicula. In feugiat magna nec massa sollicitudin maximus eu in nisi.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (81, 81, '2018-07-01', 'Nunc vitae cursus nulla, vitae mollis ligula. Praesent vitae erat non sapien iaculis blandit. Mauris porta bibendum magna et commodo. Pellentesque laoreet felis eu leo tempus rutrum. Integer ac molestie dolor. Nam interdum augue at consequat scelerisque. Maecenas sed libero et ante cursus condimentum et a libero. Nam gravida lacus enim, eget molestie lacus imperdiet quis. Nulla justo risus, egestas a ornare non, blandit vel eros. Nulla eget maximus eros. Aenean pharetra lorem et vehicula convallis. In consequat egestas commodo. Pellentesque vehicula aliquam nibh a pharetra. Proin dui velit, tempus ut feugiat at, faucibus quis elit.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (82, 82, '2018-07-01', 'Phasellus vestibulum sodales massa ac vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at facilisis nulla. Mauris a aliquet ante, euismod gravida mauris. Nam hendrerit vitae eros vitae accumsan. Nullam in turpis libero. Praesent commodo quis urna at pharetra. Aliquam mauris nisi, vulputate ut mauris ut, sollicitudin molestie justo. Ut ac aliquam magna.', 5, 4, 3, 2, 1, 2);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (83, 83, '2018-07-01', 'Vestibulum id imperdiet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sagittis augue ac venenatis faucibus. Curabitur in est egestas, euismod justo in, lobortis dolor. Etiam maximus ex nec consectetur molestie. Vestibulum dolor est, dignissim ac leo et, consectetur sagittis ligula. Nulla vehicula convallis hendrerit. In posuere porta commodo.', 3, 4, 5, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (84, 84, '2018-07-01', 'Ut eu lorem risus. Curabitur mattis venenatis quam, eu ultrices mi venenatis a. Aliquam sollicitudin augue non est pulvinar, vel laoreet justo bibendum. Curabitur quis purus diam. Vivamus tempus orci at sagittis luctus. Nullam mauris ipsum, gravida pulvinar consequat vehicula, ornare id enim. Cras cursus mauris id erat varius, quis gravida ipsum mollis. Aenean ligula diam, ultrices id imperdiet vitae, malesuada sit amet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis elit arcu. Sed semper tellus velit, sit amet tristique quam lobortis imperdiet. Phasellus id posuere turpis. Aliquam ut lacus eu nisi hendrerit vulputate.', 4, 5, 1, 2, 3, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (85, 85, '2018-07-01', 'Donec consectetur eleifend lacus nec feugiat. Praesent vel orci ante. Aenean cursus, ante non commodo consectetur, lacus augue efficitur massa, at fringilla orci eros in elit. Proin ultrices tortor nunc, eget vehicula erat posuere eget. In interdum neque ac sem convallis hendrerit. Cras egestas sollicitudin mattis. Vivamus gravida purus sit amet consectetur tempor. Ut elit orci, iaculis a congue sed, suscipit at ex. Quisque at lacus eu tellus congue rutrum euismod eu leo. Morbi blandit sapien erat, a scelerisque lorem iaculis non. Nunc ultrices justo vel elit porttitor rutrum. Nulla suscipit ex sapien, ut bibendum erat imperdiet id. Quisque sit amet felis rutrum, iaculis ante convallis, semper tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum maximus fermentum.', 5, 4, 3, 2, 1, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (86, 86, '2018-07-01', 'In venenatis eget nisl eget commodo. Nunc tempus est non feugiat elementum. Vestibulum viverra, ipsum quis vulputate consequat, libero nunc porttitor libero, at molestie erat risus convallis ligula. Curabitur vitae posuere sapien, quis eleifend est. Nam placerat tortor ac massa tincidunt varius. Donec ut pretium risus, eu condimentum enim. Aliquam rhoncus ante magna, sit amet elementum mi feugiat a. Mauris suscipit urna quis ipsum auctor, non ullamcorper mi commodo. Maecenas in hendrerit est. Nulla rhoncus congue posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 3, 2, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (87, 87, '2018-07-01', 'Nunc in sollicitudin tellus. Ut bibendum quam eget lectus ultricies molestie. Nulla sit amet imperdiet enim, vitae porta magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nisl a nisi lobortis vestibulum. Sed id justo dictum elit venenatis tempor. Mauris elementum massa enim, id pulvinar odio mattis sed. Nunc suscipit erat nec ex aliquet mollis. Vestibulum vel sodales mi, vitae sollicitudin magna. Quisque mollis, leo quis egestas semper, nisi elit interdum mauris, eu euismod est nulla at libero. Proin ut nisl at mauris mattis tristique.', 4, 5, 4, 3, 2, 1);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (88, 88, '2018-07-01', 'Curabitur consequat dolor quis orci imperdiet tristique. Nunc eu purus eu tellus facilisis vestibulum fermentum ut erat. Aenean varius auctor urna, in porttitor lectus tempor pulvinar. Vivamus felis mauris, maximus eget massa in, ullamcorper finibus quam. Aenean nibh dui, commodo sed metus et, laoreet placerat nunc. Maecenas iaculis justo lectus, tincidunt posuere ante tempor quis. Aenean ligula nulla, pharetra id est eleifend, cursus auctor eros. Quisque ut porta leo. Duis lacus odio, tempor at nisi at, pellentesque accumsan felis. Nulla luctus dui mattis urna egestas commodo. Fusce quis luctus tortor.', 2, 3, 4, 5, 4, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (89, 89, '2018-07-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue, dolor nec dictum accumsan, purus velit rhoncus justo, consequat hendrerit felis eros quis justo. Proin commodo malesuada libero. Aenean pharetra est eu maximus consequat. Etiam mattis et mi in pulvinar. Etiam rhoncus urna non est ultricies, vitae gravida est congue. Morbi lacinia nibh eget interdum vestibulum. Aliquam vitae metus sed enim pretium malesuada ac vel nibh. Duis tempus pharetra lectus. Nulla sit amet maximus felis.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (90, 90, '2018-08-01', 'Vestibulum ex ante, blandit et lacus tincidunt, pulvinar mattis lorem. Ut condimentum sem risus, vel pulvinar turpis vulputate at. Nullam accumsan sit amet ex non semper. Vestibulum quis bibendum metus. Curabitur non nulla velit. Proin porttitor nibh id dolor convallis ullamcorper. Morbi accumsan nec odio at sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed finibus tincidunt vehicula. In feugiat magna nec massa sollicitudin maximus eu in nisi.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (91, 91, '2018-08-01', 'Nunc vitae cursus nulla, vitae mollis ligula. Praesent vitae erat non sapien iaculis blandit. Mauris porta bibendum magna et commodo. Pellentesque laoreet felis eu leo tempus rutrum. Integer ac molestie dolor. Nam interdum augue at consequat scelerisque. Maecenas sed libero et ante cursus condimentum et a libero. Nam gravida lacus enim, eget molestie lacus imperdiet quis. Nulla justo risus, egestas a ornare non, blandit vel eros. Nulla eget maximus eros. Aenean pharetra lorem et vehicula convallis. In consequat egestas commodo. Pellentesque vehicula aliquam nibh a pharetra. Proin dui velit, tempus ut feugiat at, faucibus quis elit.', 1, 2, 3, 4, 5, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (92, 92, '2018-08-01', 'Phasellus vestibulum sodales massa ac vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at facilisis nulla. Mauris a aliquet ante, euismod gravida mauris. Nam hendrerit vitae eros vitae accumsan. Nullam in turpis libero. Praesent commodo quis urna at pharetra. Aliquam mauris nisi, vulputate ut mauris ut, sollicitudin molestie justo. Ut ac aliquam magna.', 5, 4, 3, 2, 1, 2);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (93, 93, '2018-08-01', 'Vestibulum id imperdiet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sagittis augue ac venenatis faucibus. Curabitur in est egestas, euismod justo in, lobortis dolor. Etiam maximus ex nec consectetur molestie. Vestibulum dolor est, dignissim ac leo et, consectetur sagittis ligula. Nulla vehicula convallis hendrerit. In posuere porta commodo.', 3, 4, 5, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (94, 94, '2018-08-01', 'Ut eu lorem risus. Curabitur mattis venenatis quam, eu ultrices mi venenatis a. Aliquam sollicitudin augue non est pulvinar, vel laoreet justo bibendum. Curabitur quis purus diam. Vivamus tempus orci at sagittis luctus. Nullam mauris ipsum, gravida pulvinar consequat vehicula, ornare id enim. Cras cursus mauris id erat varius, quis gravida ipsum mollis. Aenean ligula diam, ultrices id imperdiet vitae, malesuada sit amet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis elit arcu. Sed semper tellus velit, sit amet tristique quam lobortis imperdiet. Phasellus id posuere turpis. Aliquam ut lacus eu nisi hendrerit vulputate.', 4, 5, 1, 2, 3, 4);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (95, 95, '2018-08-01', 'Donec consectetur eleifend lacus nec feugiat. Praesent vel orci ante. Aenean cursus, ante non commodo consectetur, lacus augue efficitur massa, at fringilla orci eros in elit. Proin ultrices tortor nunc, eget vehicula erat posuere eget. In interdum neque ac sem convallis hendrerit. Cras egestas sollicitudin mattis. Vivamus gravida purus sit amet consectetur tempor. Ut elit orci, iaculis a congue sed, suscipit at ex. Quisque at lacus eu tellus congue rutrum euismod eu leo. Morbi blandit sapien erat, a scelerisque lorem iaculis non. Nunc ultrices justo vel elit porttitor rutrum. Nulla suscipit ex sapien, ut bibendum erat imperdiet id. Quisque sit amet felis rutrum, iaculis ante convallis, semper tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum maximus fermentum.', 5, 4, 3, 2, 1, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (96, 96, '2018-08-01', 'In venenatis eget nisl eget commodo. Nunc tempus est non feugiat elementum. Vestibulum viverra, ipsum quis vulputate consequat, libero nunc porttitor libero, at molestie erat risus convallis ligula. Curabitur vitae posuere sapien, quis eleifend est. Nam placerat tortor ac massa tincidunt varius. Donec ut pretium risus, eu condimentum enim. Aliquam rhoncus ante magna, sit amet elementum mi feugiat a. Mauris suscipit urna quis ipsum auctor, non ullamcorper mi commodo. Maecenas in hendrerit est. Nulla rhoncus congue posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 3, 2, 1, 2, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (97, 97, '2018-08-01', 'Nunc in sollicitudin tellus. Ut bibendum quam eget lectus ultricies molestie. Nulla sit amet imperdiet enim, vitae porta magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nisl a nisi lobortis vestibulum. Sed id justo dictum elit venenatis tempor. Mauris elementum massa enim, id pulvinar odio mattis sed. Nunc suscipit erat nec ex aliquet mollis. Vestibulum vel sodales mi, vitae sollicitudin magna. Quisque mollis, leo quis egestas semper, nisi elit interdum mauris, eu euismod est nulla at libero. Proin ut nisl at mauris mattis tristique.', 4, 5, 4, 3, 2, 1);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (98, 98, '2018-08-01', 'Curabitur consequat dolor quis orci imperdiet tristique. Nunc eu purus eu tellus facilisis vestibulum fermentum ut erat. Aenean varius auctor urna, in porttitor lectus tempor pulvinar. Vivamus felis mauris, maximus eget massa in, ullamcorper finibus quam. Aenean nibh dui, commodo sed metus et, laoreet placerat nunc. Maecenas iaculis justo lectus, tincidunt posuere ante tempor quis. Aenean ligula nulla, pharetra id est eleifend, cursus auctor eros. Quisque ut porta leo. Duis lacus odio, tempor at nisi at, pellentesque accumsan felis. Nulla luctus dui mattis urna egestas commodo. Fusce quis luctus tortor.', 2, 3, 4, 5, 4, 3);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (99, 99, '2018-08-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue, dolor nec dictum accumsan, purus velit rhoncus justo, consequat hendrerit felis eros quis justo. Proin commodo malesuada libero. Aenean pharetra est eu maximus consequat. Etiam mattis et mi in pulvinar. Etiam rhoncus urna non est ultricies, vitae gravida est congue. Morbi lacinia nibh eget interdum vestibulum. Aliquam vitae metus sed enim pretium malesuada ac vel nibh. Duis tempus pharetra lectus. Nulla sit amet maximus felis.', 2, 1, 2, 3, 4, 5);
 
 INSERT INTO Reviews 
-(r_id, booking_id, review_date, review, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
+(r_id, booking_id, review_date, review_text, accuracy, communication, cleanliness, `location`, `checkin`, `value`)
 VALUES
 (100, 100, '2018-09-01', 'Vestibulum ex ante, blandit et lacus tincidunt, pulvinar mattis lorem. Ut condimentum sem risus, vel pulvinar turpis vulputate at. Nullam accumsan sit amet ex non semper. Vestibulum quis bibendum metus. Curabitur non nulla velit. Proin porttitor nibh id dolor convallis ullamcorper. Morbi accumsan nec odio at sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed finibus tincidunt vehicula. In feugiat magna nec massa sollicitudin maximus eu in nisi.', 1, 2, 3, 4, 5, 4);
