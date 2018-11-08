@@ -92,7 +92,7 @@ module.exports = {
     db.query(`
       UPDATE Reviews SET review_text = ?
       WHERE r_id = ?;
-    `, (newReviewText, reviewId), (err, response) => {
+    `, [newReviewText, reviewId], (err, response) => {
       if (err) {
         console.error(err);
       } else {
@@ -104,7 +104,7 @@ module.exports = {
   deleteReview: (reviewId, callback) => {
     db.query(`DELETE FROM Reviews 
       WHERE r_id = ?
-    `, (reviewId), (err, response) => {
+    `, [reviewId], (err, response) => {
       if (err) {
         console.error(err);
       } else {

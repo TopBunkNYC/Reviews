@@ -21,38 +21,46 @@ describe('API functionality', () => {
     // expect(retrievedReview). text to be what I updated it to be
   })
 
-  test('deletes a review', async () => {
-    // create a review
-    axios.post('http://localhost:8001/reviews', {
-      "bookingId": 939,
-      "reviewDate": "2018-09-20",
-      "reviewText": "This is just a test! I did not stay here.",
-      "accuracy": 5,
-      "communication": 4,
-      "cleanliness": 5,
-      "location": 4,
-      "checkin": 5, 
-      "value": 4
-    })
-    .catch((err) => {
-      console.error(err);
-    })
-    // retrieve a review and save in recordBefore
-    // delete the review that was added
-    // attempt to retrieve same review and save in recordAfter
-    // expect(recordBefore).toBeDefined()
-    // expect(recordAfter). to not exist
-  })
+  // test('deletes a review', async () => {
+  //   // create a review
+  //   let before;
+  //   let after;
+  //   return axios.post('http://localhost:8001/reviews', {
+  //     "bookingId": 79000000,
+  //     "reviewText": "This is just a test! I did not stay here. I came from a test.",
+  //     "accuracy": 5,
+  //     "communication": 4,
+  //     "cleanliness": 5,
+  //     "location": 4,
+  //     "checkin": 5, 
+  //     "value": 4
+  //   })
+  //   .then(
+  //     axios.get('http://localhost:8001/reviews', {params: {bookingId: 79000000}})
+  //     .then((result) => {
+  //       before = result;
+  //     })
+  //     .then(
+  //       axios.delete('http://localhost:8001/reviews', {data: {bookingId: 79000000}})
+  //     )
+  //     .then(
+  //       axios.get('http://localhost:8001/reviews', {params: {bookingId: 79000000}})
+  //     )
+  //     .then((result) => {
+  //       after = result;
+  //     })
+  //   )
+  //   .catch((err) => {
+  //     console.error(err);
+  //   })
+  //   .then(() => {
+  //     expect(before).toBeDefined();
+  //     expect(after).toBeUndefined();
+  //   })
+  //   // retrieve a review and save in recordBefore
+  //   // delete the review that was added
+  //   // attempt to retrieve same review and save in recordAfter
+  //   // expect(recordBefore).toBeDefined()
+  //   // expect(recordAfter). to not exist
+  // })
 })
-
-/* 
-options.bookingId || Math.floor(Math.random() * 15000000),
-options.reviewDate || Date(Date.now()),
-options.reviewText, 
-options.accuracy || null,
-options.communication || null, 
-options.cleanliness || null, 
-options.location || null, 
-options.checkin || null, 
-options.value || null
-*/

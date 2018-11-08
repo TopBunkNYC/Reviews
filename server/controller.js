@@ -19,22 +19,20 @@ module.exports = {
     });
   },
 
-  postReview: (req, res) => {   // IMPLEMENT!
-    console.log('req.body looks like', req.body)
+  postReview: (req, res) => {
     models.postReview(req.body, (response) => {
       res.send(response);
     });
   },
 
-  editReview: (req, res) => {   // IMPLEMENT!
-    models.editReview(req.query.parameters, thing, thing, (response) => {
+  editReview: (req, res) => {
+    models.editReview(req.query.r_id, req.query.newReviewText, (response) => {
       res.send(response);
     });
   },
 
   deleteReview: (req, res) => {
-    console.log('req.query.id looks like', req.query.id)
-    models.deleteReview(req.query.id, (response) => {
+    models.deleteReview(req.query.r_id, (response) => {
       res.send(response);
     });
   }
