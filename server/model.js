@@ -5,10 +5,10 @@ module.exports = {
     const SQLquery = `SELECT *
     FROM Reviews
     INNER JOIN Bookings
-    ON Reviews.bookings_id = Bookings.b_id
+    ON Reviews.booking_id = Bookings.b_id
     LEFT JOIN Users
-    ON Bookings.users_id = Users.u_id
-    WHERE Bookings.listings_id = ${listingID}
+    ON Bookings.user_id = Users.u_id
+    WHERE Bookings.listing_id = ${listingID}
     ORDER BY Reviews.review_date DESC;`;
     db.query(SQLquery, (error, response) => {
       if (error) {
@@ -23,10 +23,10 @@ module.exports = {
     let SQLquery = `SELECT AVG(accuracy) AS accuracy, AVG(communication) AS communication, AVG(cleanliness) as cleanliness, AVG(\`location\`) as location, AVG(\`check-in\`) as checkin, AVG(\`value\`) as value
     FROM Reviews
     INNER JOIN Bookings
-    ON Reviews.bookings_id = Bookings.b_id
+    ON Reviews.booking_id = Bookings.b_id
     LEFT JOIN Users
-    ON Bookings.users_id = Users.u_id
-    WHERE Bookings.listings_id = ${listingID};`;
+    ON Bookings.user_id = Users.u_id
+    WHERE Bookings.listing_id = ${listingID};`;
     db.query(SQLquery, (error, response) => {
       if (error) {
         console.error(error);
@@ -40,10 +40,10 @@ module.exports = {
     const SQLquery = `SELECT *
     FROM Reviews
     INNER JOIN Bookings
-    ON Reviews.bookings_id = Bookings.b_id
+    ON Reviews.booking_id = Bookings.b_id
     LEFT JOIN Users
-    ON Bookings.users_id = Users.u_id
-    WHERE Bookings.listings_id = ${listingID}
+    ON Bookings.user_id = Users.u_id
+    WHERE Bookings.listing_id = ${listingID}
     AND Reviews.review LIKE "${query}"
     ORDER BY Reviews.review_date DESC;`;
 

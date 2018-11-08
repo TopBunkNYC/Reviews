@@ -19,5 +19,9 @@ module.exports = {
     });
   },
 
+  postReview: (req, res) => {},
 
+  editReview: (req, res) => {},
+
+  deleteReview: (req, res) => {}
 };
