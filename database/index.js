@@ -1,4 +1,3 @@
-/* REMEMBER TO DELETE DROP DATABSE FROM SCHEMA.SQL WHEN EVERYTHING IS WORKING */
 const mysql = require('mysql');
 const config = require('../config.js').dbConfig;
 
