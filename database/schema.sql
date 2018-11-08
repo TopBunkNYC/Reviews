@@ -22,22 +22,22 @@ CREATE TABLE Bookings (
   `user_id` INTEGER NOT NULL,
   `stay_start` DATE,
   `stay_end` DATE,
-  PRIMARY KEY (`b_id`),
-  FOREIGN KEY (`listing_id`) REFERENCES Listings(`l_id`),
-  FOREIGN KEY (`user_id`) REFERENCES Users(`u_id`)
+  PRIMARY KEY (`b_id`)
+  -- FOREIGN KEY (`listing_id`) REFERENCES Listings(`l_id`),
+  -- FOREIGN KEY (`user_id`) REFERENCES Users(`u_id`)
 );
 
 CREATE TABLE Reviews (
   `r_id` INTEGER NOT NULL AUTO_INCREMENT,
-  `bookings_id` INTEGER NOT NULL,
+  `booking_id` INTEGER NOT NULL,
   `review_date` DATE,
-  `review` VARCHAR(5000),
+  `review_text` VARCHAR(5000),
   `accuracy` TINYINT,
   `communication` TINYINT,
   `cleanliness` TINYINT,
   `location` TINYINT,
-  `check-in` TINYINT,
+  `checkin` TINYINT,
   `value` TINYINT,
-  PRIMARY KEY (`r_id`),
-  FOREIGN KEY (`bookings_id`) REFERENCES Bookings(`b_id`)
+  PRIMARY KEY (`r_id`)
+  -- FOREIGN KEY (`booking_id`) REFERENCES Bookings(`b_id`)
 );

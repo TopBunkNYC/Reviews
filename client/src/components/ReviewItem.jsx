@@ -5,15 +5,15 @@ export default class ReviewItem extends React.Component {
     super(props);
     this.state = {
       truncate: false,
-      shortText: this.props.review.review.substring(0, 280) + '...',
-      reviewText: this.props.review.review
+      shortText: this.props.review.review_text.substring(0, 280) + '...',
+      reviewText: this.props.review.review_text
     }
     this.clickHandler = this.clickHandler.bind(this);
     this.showAlert = this.showAlert.bind(this);
   }
 
   componentDidMount() {
-    if (this.props.review.review.length > 280) {
+    if (this.props.review.review_text.length > 280) {
       this.setState({
         truncate: true
       });
