@@ -64,7 +64,7 @@ module.exports = {
   postReview: (options, callback) => {
     var orderedOptions = [
       options.bookingId || Math.floor(Math.random() * 15000000),
-      options.reviewDate || Date(Date.now()),
+      new Date().toISOString().slice(0,10),
       options.reviewText, 
       options.accuracy || null,
       options.communication || null, 
@@ -79,7 +79,7 @@ module.exports = {
         communication, cleanliness, location, checkin, value)
       VALUES
         (?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `, (...orderedOptions), (err, response) => {
+    `, (orderedOptions), (err, response) => {
       if (err) {
         console.error(err);
       } else {

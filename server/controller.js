@@ -20,7 +20,8 @@ module.exports = {
   },
 
   postReview: (req, res) => {   // IMPLEMENT!
-    models.postReview(req.query.parameters, thing, thing, (response) => {
+    console.log('req.body looks like', req.body)
+    models.postReview(req.body, (response) => {
       res.send(response);
     });
   },
@@ -32,6 +33,7 @@ module.exports = {
   },
 
   deleteReview: (req, res) => {
+    console.log('req.query.id looks like', req.query.id)
     models.deleteReview(req.query.id, (response) => {
       res.send(response);
     });
