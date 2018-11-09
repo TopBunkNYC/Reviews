@@ -11,7 +11,7 @@
     "test": "jest",
     "seed-mySQL": "mysql -u root -p < database/mysqlSchema.sql",
     "postseed-mySQL": "mysql -u root -p < database/sampleData.sql",
-    "seed-pg": "psql topbunk < ./database/pgSchema.sql",
+    "seed-pg": "psql topbunk < ./database/pgSchema.sql && node ./database/build.js",
     "start-aws": "pm2 start server/index.js",
     "listpm2": "pm2 list",
     "pm2server": "pm2 show server",
