@@ -119,9 +119,6 @@ let endWrite;
   endWrite = moment();
   console.log('duration for Users creation & writing:', endWrite.diff(startWrite), 'ms');
 
-  // const used = process.memoryUsage().heapUsed / 1024 / 1024;
-  // console.log(`The script uses approximately ${Math.round(used * 100) / 100} MB`);
-
   let endAll = moment();
   console.log('duration for entire build:', endAll.diff(startAll), 'ms');
   knex.destroy();
