@@ -14,10 +14,12 @@ let endWrite;
 
 (async () => {
   let startAll = moment();
+  
+  ////////// REVIEWS //////////
+  startWrite = moment();
   let bookingIdHash = {};
   
-  startWrite = moment();
-  for (let i = 1; i < 80; i++) {   // number between 1 to 10,000,000
+  for (let i = 0; i < 80; i++) {   // number between 1 to 10,000,000
     let reviewsArr = [];
 
     for (j = 0; j < 1250; j++) {
@@ -48,30 +50,52 @@ let endWrite;
   endWrite = moment();
   console.log('duration for Reviews creation & writing:', endWrite.diff(startWrite), 'ms');
   
-  let bookingsArr = [];
+
+  ////////// BOOKINGS //////////
+  let startObjectKeys = moment();
   let bookingIds = Object.keys(bookingIdHash);
-  for (let i = 0; i < 6; i++) {   // number betw 0 to 9,999,999
-    let stay_start = randomDate();
-    let duration = Math.ceil(Math.random() * 7);
-    let stay_end = moment(stay_start).add(duration, 'days').toISOString().slice(0, 10);
-    bookingsArr.push({
-      b_id: bookingIds[i],
-      listing_id: Math.ceil(Math.random() * 1000000),
-      user_id: Math.ceil(Math.random() * 1000000),
-      stay_start: stay_start,
-      stay_end: stay_end
-    })
-  }
-  await knex.batchInsert('topbunk.bookings', bookingsArr);
+  let idTracker = 0;
+  let endObjectKeys = moment();
+  console.log('duration for Object.keys on hashtable:', endObjectKeys.diff(startObjectKeys), 'ms');
   
-  let listingsArr = [];
-  for (let i = 1; i < 6; i++) {   // number betw 1 to 1,000,000
-    listingsArr.push({
-      l_id: i
-    })
+  startWrite = moment();
+  for (let i = 0; i < 80; i++) {
+    let bookingsArr = [];
+
+    for (let j = 0; j < 1250; j++) {
+      let stay_start = randomDate();
+      let duration = Math.ceil(Math.random() * 7);
+      let stay_end = moment(stay_start).add(duration, 'days').toISOString().slice(0, 10);
+      bookingsArr.push({
+        b_id: bookingIds[idTracker++],
+        listing_id: Math.ceil(Math.random() * 1000000),
+        user_id: Math.ceil(Math.random() * 1000000),
+        stay_start: stay_start,
+        stay_end: stay_end
+      })
+    }
+    await knex.batchInsert('topbunk.bookings', bookingsArr, 625);
   }
-  await knex.batchInsert('topbunk.listings', listingsArr);
+  endWrite = moment();
+  console.log('duration for Bookings creation & writing (after Object.keys):', endWrite.diff(startWrite), 'ms');
+
+  ////////// LISTINGS //////////
+  startWrite = moment();
+  for (let i = 0; i < 80; i++) {
+    let listingsArr = [];
+    let idTracker = 1;
+    for (let j = 1; j < 1250; j++) {   // number betw 1 to 1,000,000
+      listingsArr.push({
+        l_id: idTracker++
+      })
+    }
+    await knex.batchInsert('topbunk.listings', listingsArr, 625);
+  }
+
+  endWrite = moment();
+  console.log('duration for Listings creation & writing:', endWrite.diff(startWrite), 'ms');
   
+  ////////// USERS //////////
   let usersArr = [];
   for (let i = 1; i < 6; i++) {   // number betw 1 to 1,000,000
     usersArr.push({
