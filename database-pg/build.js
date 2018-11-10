@@ -13,47 +13,56 @@ let endWrite;
 
 
 (async () => {
-  let reviewsArr = [];
+  let startAll = moment();
   let bookingIdHash = {};
-
+  
+  startWrite = moment();
   for (let i = 1; i < 100; i++) {   // number between 1 to 10,000,000
-    let bookingId = Math.ceil(Math.rand() * 400000000);
-    if (!bookingIdHash.hasOwnProperty(bookingId)) {
-      bookingIdHash[bookingId] = true;
-    } else {
-      while (bookingIdHash.hasOwnProperty(bookingId)) {
-        bookingId++;
-      }
-      bookingIdHash[bookingId] = true;
-    }
+    let reviewsArr = [];
 
-    reviewsArr.push({
-      r_id: i,
-      booking_id: bookingId,    
-      review_date: randomDate(),
-      review_text: faker.lorem.paragraphs(Math.ceil(Math.random() * 2)),
-      accuracy: Math.ceil(Math.random() * 4),
-      communication: Math.ceil(Math.random() * 4),
-      cleanliness: Math.ceil(Math.random() * 4),
-      location: Math.ceil(Math.random() * 4),
-      checkin: Math.ceil(Math.random() * 4),
-      value: Math.ceil(Math.random() * 4)
-    })
+    for (j = 0; j < 1000; j++) {
+      let bookingId = Math.ceil(Math.random() * 400000000);
+      if (!bookingIdHash.hasOwnProperty(bookingId)) {
+        bookingIdHash[bookingId] = true;
+      } else {
+        while (bookingIdHash.hasOwnProperty(bookingId)) {
+          bookingId++;
+        }
+        bookingIdHash[bookingId] = true;
+      }
+  
+      reviewsArr.push({
+        booking_id: bookingId,    
+        review_date: randomDate(),
+        review_text: faker.lorem.paragraphs(Math.ceil(Math.random() * 2)),
+        accuracy: Math.ceil(Math.random() * 4),
+        communication: Math.ceil(Math.random() * 4),
+        cleanliness: Math.ceil(Math.random() * 4),
+        location: Math.ceil(Math.random() * 4),
+        checkin: Math.ceil(Math.random() * 4),
+        value: Math.ceil(Math.random() * 4)
+      })
+    }
+    await knex.batchInsert('topbunk.reviews', reviewsArr, 500);
   }
+  endWrite = moment();
+  console.log('duration for Reviews creation & writing:', endWrite.diff(startWrite), 'ms');
   
   let bookingsArr = [];
-  for (let i = 1; i < 6; i++) {   // number betw 1 to 10,000,000
+  let bookingIds = Object.keys(bookingIdHash);
+  for (let i = 0; i < 6; i++) {   // number betw 0 to 9,999,999
     let stay_start = randomDate();
     let duration = Math.ceil(Math.random() * 7);
     let stay_end = moment(stay_start).add(duration, 'days').toISOString().slice(0, 10);
     bookingsArr.push({
-      b_id: i,
+      b_id: bookingIds[i],
       listing_id: Math.ceil(Math.random() * 1000000),
       user_id: Math.ceil(Math.random() * 1000000),
       stay_start: stay_start,
       stay_end: stay_end
     })
   }
+  await knex.batchInsert('topbunk.bookings', bookingsArr);
   
   let listingsArr = [];
   for (let i = 1; i < 6; i++) {   // number betw 1 to 1,000,000
@@ -61,6 +70,7 @@ let endWrite;
       l_id: i
     })
   }
+  await knex.batchInsert('topbunk.listings', listingsArr);
   
   let usersArr = [];
   for (let i = 1; i < 6; i++) {   // number betw 1 to 1,000,000
@@ -72,25 +82,12 @@ let endWrite;
       profile_url: faker.internet.url()
     })
   }
-  
-  // console.log('reviewsArr:', reviewsArr);
-  // console.log('bookingsArr:', bookingsArr);
-  // console.log('listingsArr:', listingsArr);
-  // console.log('usersArr:', usersArr);
-  
-  startWrite = moment();
-  console.log(startWrite);
-
-  await knex.batchInsert('topbunk.reviews', reviewsArr);
-  const used = process.memoryUsage().heapUsed / 1024 / 1024;
-  console.log(`The script uses approximately ${Math.round(used * 100) / 100} MB`);
-  await knex.batchInsert('topbunk.bookings', bookingsArr);
-  await knex.batchInsert('topbunk.listings', listingsArr);
   await knex.batchInsert('topbunk.users', usersArr);
+  
+  // const used = process.memoryUsage().heapUsed / 1024 / 1024;
+  // console.log(`The script uses approximately ${Math.round(used * 100) / 100} MB`);
 
-  endWrite = moment();
-  console.log(endWrite);
-  console.log('duration:', endWrite.diff(startWrite), 'ms');
-
+  let endAll = moment();
+  console.log('duration for entire build:', endAll.diff(startAll), 'ms');
   knex.destroy();
 })()
