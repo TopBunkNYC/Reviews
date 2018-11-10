@@ -18,8 +18,8 @@ let endWrite;
   ////////// REVIEWS //////////
   startWrite = moment();
   let bookingIdHash = {};
-  
-  for (let i = 0; i < 80; i++) {   // number between 1 to 10,000,000
+  // 80 is for 100k, 800 is for 1 million, 8000 for 10 million
+  for (let i = 0; i < 8000; i++) {   // number between 1 to 10,000,000
     let reviewsArr = [];
 
     for (j = 0; j < 1250; j++) {
@@ -54,12 +54,12 @@ let endWrite;
   ////////// BOOKINGS //////////
   let startObjectKeys = moment();
   let bookingIds = Object.keys(bookingIdHash);
-  let idTracker = 0;
+  let bookingIdTracker = 0;
   let endObjectKeys = moment();
   console.log('duration for Object.keys on hashtable:', endObjectKeys.diff(startObjectKeys), 'ms');
   
   startWrite = moment();
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 8000; i++) {
     let bookingsArr = [];
 
     for (let j = 0; j < 1250; j++) {
@@ -67,7 +67,7 @@ let endWrite;
       let duration = Math.ceil(Math.random() * 7);
       let stay_end = moment(stay_start).add(duration, 'days').toISOString().slice(0, 10);
       bookingsArr.push({
-        b_id: bookingIds[idTracker++],
+        b_id: bookingIds[bookingIdTracker++],
         listing_id: Math.ceil(Math.random() * 1000000),
         user_id: Math.ceil(Math.random() * 1000000),
         stay_start: stay_start,
@@ -81,33 +81,44 @@ let endWrite;
 
   ////////// LISTINGS //////////
   startWrite = moment();
-  for (let i = 0; i < 80; i++) {
+  let listingIdTracker = 1;
+  for (let i = 0; i < 800; i++) {
     let listingsArr = [];
-    let idTracker = 1;
-    for (let j = 1; j < 1250; j++) {   // number betw 1 to 1,000,000
+    for (let j = 0; j < 1250; j++, listingIdTracker++) {   // number betw 1 to 1,000,000
       listingsArr.push({
-        l_id: idTracker++
+        l_id: listingIdTracker
       })
     }
-    await knex.batchInsert('topbunk.listings', listingsArr, 625);
+    try {
+      await knex.batchInsert('topbunk.listings', listingsArr, 625);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   endWrite = moment();
   console.log('duration for Listings creation & writing:', endWrite.diff(startWrite), 'ms');
   
   ////////// USERS //////////
-  let usersArr = [];
-  for (let i = 1; i < 6; i++) {   // number betw 1 to 1,000,000
-    usersArr.push({
-      u_id: i,
-      username: faker.internet.userName(),
-      display_name: faker.name.firstName(),
-      photo_url: faker.image.imageUrl(48, 48),
-      profile_url: faker.internet.url()
-    })
+  startWrite = moment();
+  let userIdTracker = 1;
+  for (let i = 0; i < 800; i++) {
+    let usersArr = [];
+
+    for (let j = 0; j < 1250; j++, userIdTracker++) {   // number betw 1 to 1,000,000
+      usersArr.push({
+        u_id: userIdTracker,
+        username: faker.internet.userName(),
+        display_name: faker.name.firstName(),
+        photo_url: faker.image.imageUrl(48, 48),
+        profile_url: faker.internet.url()
+      })
+    }
+    await knex.batchInsert('topbunk.users', usersArr, 625);
   }
-  await knex.batchInsert('topbunk.users', usersArr);
-  
+  endWrite = moment();
+  console.log('duration for Users creation & writing:', endWrite.diff(startWrite), 'ms');
+
   // const used = process.memoryUsage().heapUsed / 1024 / 1024;
   // console.log(`The script uses approximately ${Math.round(used * 100) / 100} MB`);
 
