@@ -17,10 +17,10 @@ let endWrite;
   let bookingIdHash = {};
   
   startWrite = moment();
-  for (let i = 1; i < 100; i++) {   // number between 1 to 10,000,000
+  for (let i = 1; i < 80; i++) {   // number between 1 to 10,000,000
     let reviewsArr = [];
 
-    for (j = 0; j < 1000; j++) {
+    for (j = 0; j < 1250; j++) {
       let bookingId = Math.ceil(Math.random() * 400000000);
       if (!bookingIdHash.hasOwnProperty(bookingId)) {
         bookingIdHash[bookingId] = true;
@@ -43,7 +43,7 @@ let endWrite;
         value: Math.ceil(Math.random() * 4)
       })
     }
-    await knex.batchInsert('topbunk.reviews', reviewsArr, 500);
+    await knex.batchInsert('topbunk.reviews', reviewsArr, 625);
   }
   endWrite = moment();
   console.log('duration for Reviews creation & writing:', endWrite.diff(startWrite), 'ms');
