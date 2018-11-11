@@ -1,19 +1,19 @@
 
 const knex = require('./index.js');
 
-exports.insertReviewsPG = () => {
+exports.insertReviewsPG = (reviewsArr) => {
   knex.batchInsert('topbunk.reviews', reviewsArr, 625);
 }
 
-exports.insertBookingsPG = () => {
+exports.insertBookingsPG = (bookingsArr) => {
   knex.batchInsert('topbunk.bookings', bookingsArr, 625);
 }
 
-exports.insertListingsPG = () => {
+exports.insertListingsPG = (listingsArr) => {
   knex.batchInsert('topbunk.listings', listingsArr, 625);
 }
 
-exports.insertUsersPG = () => {
+exports.insertUsersPG = (usersArr) => {
   knex.batchInsert('topbunk.users', usersArr, 625);
 }
 
