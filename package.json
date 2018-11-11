@@ -11,7 +11,7 @@
     "test": "jest",
     "seed-mySQL": "mysql -u root -p < database-mysql/mysqlSchema.sql",
     "postseed-mySQL": "mysql -u root -p < database-mysql/sampleData.sql",
-    "seed-pg": "psql topbunk < ./database-pg/pgSchema.sql && node ./database-pg/build.js",
+    "seed-pg": "psql topbunk < ./database-pg/pgSchema.sql && node ./build-database/build.js",
     "start-aws": "pm2 start server/index.js",
     "listpm2": "pm2 list",
     "pm2server": "pm2 show server",
@@ -48,6 +48,7 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
+    "assert": "^1.4.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "bookshelf": "^0.13.3",
@@ -57,6 +58,8 @@
     "faker": "^4.1.0",
     "knex": "^0.15.2",
     "moment": "^2.22.2",
+    "mongodb": "^3.1.9",
+    "mongoose": "^5.3.11",
     "mysql": "^2.16.0",
     "nodemon": "^1.18.4",
     "path": "^0.12.7",
