@@ -89,7 +89,7 @@ let endWrite;
       })
     }
     try {
-      await pgMethods.insertListingsPG();
+      await pgMethods.insertListingsPG(listingsArr);
     } catch (error) {
       console.error(error);
     }
@@ -120,5 +120,5 @@ let endWrite;
 
   let endAll = moment();
   console.log('duration for entire build:', endAll.diff(startAll), 'ms');
-  knex.destroy();
+  // pgMethods.endPGconnection(); // this is shutting off prematurely
 })()
