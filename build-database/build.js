@@ -1,6 +1,7 @@
 const faker = require('faker');
 const moment = require('moment');
 const pgMethods = require('../database-pg/load-pg.js');
+const mongoMethods = require('../database-mongo/load-mongo.js');
 
 const randomDate = (startDate = new Date(2015, 08, 01), endDate = new Date()) => {
   let rand = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
@@ -9,7 +10,6 @@ const randomDate = (startDate = new Date(2015, 08, 01), endDate = new Date()) =>
 
 let startWrite;
 let endWrite;
-
 
 (async () => {
   let startAll = moment();
@@ -36,12 +36,12 @@ let endWrite;
         booking_id: bookingId,    
         review_date: randomDate(),
         review_text: faker.lorem.paragraphs(Math.ceil(Math.random() * 2)),
-        accuracy: Math.ceil(Math.random() * 4),
-        communication: Math.ceil(Math.random() * 4),
-        cleanliness: Math.ceil(Math.random() * 4),
-        location: Math.ceil(Math.random() * 4),
-        checkin: Math.ceil(Math.random() * 4),
-        value: Math.ceil(Math.random() * 4)
+        accuracy: Math.ceil(Math.random() * 5),
+        communication: Math.ceil(Math.random() * 5),
+        cleanliness: Math.ceil(Math.random() * 5),
+        location: Math.ceil(Math.random() * 5),
+        checkin: Math.ceil(Math.random() * 5),
+        value: Math.ceil(Math.random() * 5)
       })
     }
     await pgMethods.insertReviewsPG();
