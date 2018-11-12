@@ -9,4 +9,4 @@ db.once('open', () => {
   console.log('Connected to db...');
 })
 
-module.exports = db
+module.exports = db;
