@@ -100,16 +100,7 @@ let endWrite;
 
   endWrite = moment();
   console.log('duration for Listings creation & writing:', endWrite.diff(startAll), 'ms');
-  console.log('the number of reviews created is', reviewCounter - 1)
-  
-  // Listing.findOne({
-  //   _id: 9
-  // })
-  // .exec(function (err, listing) {
-  //   if (err) return console.error(err);
-  //   console.log('example listing #9 looks like', listing);
-  // });
-  
+  console.log('the number of reviews created is', reviewCounter - 1)  
 })()
 
 
