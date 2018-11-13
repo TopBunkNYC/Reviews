@@ -62,7 +62,7 @@ let endWrite;
       })
 
       // Add a random number of reviews between 0 and 10
-      let numReviews = Math.floor(Math.random() * 11);
+      let numReviews = Math.floor(Math.random() * 21);
       for (let k = 0; k < numReviews; k++) {
         let reviewInstance = new Review({
           _id: reviewCounter++,
