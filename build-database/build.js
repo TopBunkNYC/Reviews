@@ -1,7 +1,8 @@
 const faker = require('faker');
 const moment = require('moment');
 const pgMethods = require('../database-pg/load-pg.js');
-const mongoMethods = require('../database-mongo/load-mongo.js');
+const knex = require('../database-pg/index.js');
+// const mongoMethods = require('../database-mongo/load-mongo.js');
 
 const randomDate = (startDate = new Date(2015, 08, 01), endDate = new Date()) => {
   let rand = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
@@ -44,7 +45,8 @@ let endWrite;
         value: Math.ceil(Math.random() * 5)
       })
     }
-    await pgMethods.insertReviewsPG();
+    await knex.batchInsert('topbunk.reviews', reviewsArr, 625);
+    console.log('wrote review chunk #', i)
   }
   endWrite = moment();
   console.log('duration for Reviews creation & writing:', endWrite.diff(startWrite), 'ms');
@@ -73,7 +75,7 @@ let endWrite;
         stay_end: stay_end
       })
     }
-    await pgMethods.insertBookingsPG();
+    await knex.batchInsert('topbunk.bookings', bookingsArr, 625);
   }
   endWrite = moment();
   console.log('duration for Bookings creation & writing (after Object.keys):', endWrite.diff(startWrite), 'ms');
@@ -89,7 +91,7 @@ let endWrite;
       })
     }
     try {
-      await pgMethods.insertListingsPG(listingsArr);
+      await knex.batchInsert('topbunk.listings', listingsArr, 625);
     } catch (error) {
       console.error(error);
     }
@@ -113,7 +115,7 @@ let endWrite;
         profile_url: faker.internet.url()
       })
     }
-    await pgMethods.insertUsersPG();
+    await knex.batchInsert('topbunk.users', usersArr, 625);
   }
   endWrite = moment();
   console.log('duration for Users creation & writing:', endWrite.diff(startWrite), 'ms');
