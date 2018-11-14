@@ -16,7 +16,7 @@ const writeToStream = (writer, constructor, len) => {
     let ok = true;
     while (i > 0 && ok) {
       const newBufferTime = moment();
-      let data = constructor(200).join('\n') + '\n';
+      let data = constructor(500).join('\n') + '\n';
       ok = writer.write(data);
       const endBufferTime = moment();
       console.log(`${i}: Total time: ${(endBufferTime - startTime) / 1000}, Batch time: ${(endBufferTime - newBufferTime) / 1000}`)
@@ -35,6 +35,7 @@ const writeToStream = (writer, constructor, len) => {
 ( async() => {
 ////////// REVIEWS //////////
 const reviewsStream = fs.createWriteStream('./build-database/data-reviews.csv');
+let reviewIdTracker = 1;
 
 let bookingIdHash = {};
 
@@ -52,11 +53,12 @@ const createReviews = (num) => {
       bookingIdHash[bookingId] = true;
     }
 
-    arrayOfReviews.push(`${bookingId}\t${randomDate()}` + 
-      `\t${faker.lorem.sentences(Math.ceil(Math.random() * 12))}\t${Math.ceil(Math.random() * 5)}` + 
+    arrayOfReviews.push(`${reviewIdTracker}\t${bookingId}\t${randomDate()}` + 
+      `\t${faker.lorem.paragraphs(Math.ceil(Math.random() * 2)).replace(/\n/g, '\\n').replace(/\r/g, '\\r')}` + 
       `\t${Math.ceil(Math.random() * 5)}\t${Math.ceil(Math.random() * 5)}` +
       `\t${Math.ceil(Math.random() * 5)}\t${Math.ceil(Math.random() * 5)}` + 
-      `\t${Math.ceil(Math.random() * 5)}`);
+      `\t${Math.ceil(Math.random() * 5)}\t${Math.ceil(Math.random() * 5)}`);
+      reviewIdTracker++;
   }
 
   return arrayOfReviews;
@@ -148,6 +150,7 @@ const createUsers = (num) => {
     usersArr.push(`${userIdTracker}\t${faker.internet.userName()}\t${faker.name.firstName()}` + 
       `\t${faker.image.imageUrl(48, 48)}\t${faker.internet.url()}`
     )
+    userIdTracker++;
   }
   return usersArr;
 }

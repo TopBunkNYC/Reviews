@@ -10,7 +10,7 @@
     "start": "node server/index.js",
     "test": "jest",
     "build-csv": "node build-database/build-csv.js",
-    "load-csv": "psql topbunk < build-database/copy-pg.sql",
+    "load-csv": "psql topbunk < ./database-pg/pgSchema.sql && time psql topbunk < build-database/copy-pg.sql",
     "seed-mySQL": "mysql -u root -p < database-mysql/mysqlSchema.sql",
     "postseed-mySQL": "mysql -u root -p < database-mysql/sampleData.sql",
     "seed-pg": "psql topbunk < ./database-pg/pgSchema.sql && node ./build-database/build.js",
