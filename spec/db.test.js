@@ -46,9 +46,7 @@ describe('PostgreSQL database speed', () => {
     let orderedOptions = [-1, new Date().toISOString().slice(0,10), 'this is review text',
       5, 4, 3, 5, 4, 3];
 
-    for (let i = 0; i < 10; i++) {
-      // choose a random id between 9,600,000 to 9,650,000
-      let id = Math.ceil(Math.random() * 50000) + 9600000;
+    for (let i = 0; i < 2; i++) {
       knex.on('query', () => {
         startTime = now();
       })
@@ -64,13 +62,11 @@ describe('PostgreSQL database speed', () => {
           console.log('result of write operation is', result)
         }
       })
-      .then(async () => {
-        await knex.raw(`DELETE FROM reviews where booking_id = -1`);
-      })
-      .catch((err) => { console.error(err); })
+      .catch((err) => { console.error(err); }) 
     }
 
     let averageTime = totalTime / 10;
+    await knex.raw(`DELETE FROM reviews where booking_id = -1`);
     console.log('average time for write to Review table is', averageTime);
     expect(averageTime).toBeLessThan(50);
   })
