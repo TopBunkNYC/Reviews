@@ -25,3 +25,12 @@ RESTART WITH 10000001;
 
 ALTER SEQUENCE users_u_id_seq 
 RESTART WITH 1000001;
+
+CREATE INDEX listing_index 
+ON bookings (listing_id);
+
+CREATE INDEX booking_index
+ON reviews (booking_id);
+
+CREATE INDEX user_index
+ON bookings (user_id);
