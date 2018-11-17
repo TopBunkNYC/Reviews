@@ -2,7 +2,6 @@ const faker = require('faker');
 const moment = require('moment');
 const pgMethods = require('../database-pg/load-pg.js');
 const knex = require('../database-pg/index.js');
-// const mongoMethods = require('../database-mongo/load-mongo.js');
 
 const randomDate = (startDate = new Date(2015, 08, 01), endDate = new Date()) => {
   let rand = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));

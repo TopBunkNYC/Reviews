@@ -1,68 +1,48 @@
-const db = require('../database-mysql/index.js');
+// const db = require('../database-mysql/index.js');
+const knex = require('../database-pg/index.js')
 
 module.exports = {
-  getAllReviews: (listingId, callback) => {
-    db.query(`SELECT *
-      FROM Reviews
-      INNER JOIN Bookings
-      ON Reviews.booking_id = Bookings.b_id
-      LEFT JOIN Users
-      ON Bookings.user_id = Users.u_id
-      WHERE Bookings.listing_id = ?
-      ORDER BY Reviews.review_date DESC;
-    `,(listingId), (error, response) => {
-      if (error) {
-        console.error(error);
-      } else {
-        callback(response);
-      }
-    });
+  getAllReviews: (listingId) => {
+    return knex.raw(`SELECT *
+    FROM bookings
+    INNER JOIN reviews
+    ON (bookings.b_id = reviews.booking_id AND bookings.listing_id = ?)
+    INNER JOIN users 
+    ON (bookings.user_id = users.u_id)
+    ORDER BY reviews.review_date DESC;
+    `,(listingId)); 
   },
 
-  getRatings: (listingId, callback) => {
-    db.query(`SELECT 
+  getRatings: (listingId) => {  // update
+    return knex.raw(`SELECT 
       AVG(accuracy) AS accuracy, 
       AVG(communication) AS communication, 
       AVG(cleanliness) AS cleanliness, 
       AVG(location) AS location, 
       AVG(checkin) AS checkin, 
       AVG(value) AS value
-      FROM Reviews
-      INNER JOIN Bookings
-      ON Reviews.booking_id = Bookings.b_id
-      LEFT JOIN Users
-      ON Bookings.user_id = Users.u_id
-      WHERE Bookings.listing_id = ?
-    `, (listingId), (error, response) => {
-      if (error) {
-        console.error(error);
-      } else {
-        callback(response);
-      }
-    });
+      FROM reviews
+      INNER JOIN bookings
+      ON (reviews.booking_id = bookings.b_id AND bookings.listing_id = ?);
+    `, (listingId));
   },
 
-  getSearch: (listingId, query, callback) => {
-    db.query(`SELECT *
-      FROM Reviews
+  getSearch: (listingId, query) => {  // NOT WORKING
+    return knex.raw(`SELECT *
+      FROM reviews
       INNER JOIN Bookings
-      ON Reviews.booking_id = Bookings.b_id
-      LEFT JOIN Users
-      ON Bookings.user_id = Users.u_id
-      WHERE Bookings.listing_id = ?
-      AND Reviews.review_text LIKE ?
+      ON 
+        (reviews.booking_id = bookings.b_id 
+        AND bookings.listing_id = ? 
+        AND reviews.review_text LIKE ?)
+      INNER JOIN Users
+      ON (bookings.user_id = users.u_id)
       ORDER BY Reviews.review_date DESC;
-    `, (listingId, `"${query}"`), (error, response) => {
-      if (error) {
-        console.error(error);
-      } else {
-        callback(response);
-      }
-    });
+    `, (listingId, `${query}`));
   },
 
-  postReview: (options, callback) => {
-    var orderedOptions = [
+  postReview: (options) => { // update
+    let orderedOptions = [
       options.bookingId || Math.floor(Math.random() * 15000000),
       new Date().toISOString().slice(0,10),
       options.reviewText, 
@@ -73,43 +53,25 @@ module.exports = {
       options.checkin || null, 
       options.value || null
     ];
-    db.query(`
-      INSERT into Reviews 
+    return knex.raw(`
+      INSERT into reviews 
         (booking_id, review_date, review_text, accuracy, 
         communication, cleanliness, location, checkin, value)
       VALUES
         (?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `, (orderedOptions), (err, response) => {
-      if (err) {
-        console.error(err);
-      } else {
-        callback(response);
-      }
-    })
+    `, (orderedOptions));
   },
 
-  editReview: (reviewId, newReviewText, callback) => {
-    db.query(`
-      UPDATE Reviews SET review_text = ?
+  editReview: (reviewId, newReviewText, callback) => { // update
+    return knex.raw(`
+      UPDATE reviews SET review_text = ?
       WHERE r_id = ?;
-    `, [newReviewText, reviewId], (err, response) => {
-      if (err) {
-        console.error(err);
-      } else {
-        callback(response);
-      }
-    })
+    `, [newReviewText, reviewId]);
   },
 
-  deleteReview: (reviewId, callback) => {
-    db.query(`DELETE FROM Reviews 
+  deleteReview: (reviewId, callback) => { // update
+    return knex.raw(`DELETE FROM reviews 
       WHERE r_id = ?
-    `, [reviewId], (err, response) => {
-      if (err) {
-        console.error(err);
-      } else {
-        callback(response);
-      }
-    });
+    `, [reviewId]);
   }
 };
