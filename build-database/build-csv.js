@@ -148,7 +148,8 @@ const createUsers = (num) => {
   let usersArr = [];
   for (i = 0; i < num; i++) {
     usersArr.push(`${userIdTracker}\t${faker.internet.userName()}\t${faker.name.firstName()}` + 
-      `\t${faker.image.imageUrl(48, 48)}\t${faker.internet.url()}`
+      `\t${'https://loremflickr.com/48/48/travel,city,person/all?random=' + (Math.ceil(Math.random() * 500))}` + 
+      `\t${faker.internet.url()}`
     )
     userIdTracker++;
   }
