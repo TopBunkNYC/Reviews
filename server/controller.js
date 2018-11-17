@@ -14,7 +14,15 @@ module.exports = {
   getRatings: (req, res) => {
     models.getRatings(req.query.id)
     .then((response) => {
-      res.send(response.rows)
+      res.send(response.rows.map((ratingObject) => {
+        ratingObject.accuracy *= 1;
+        ratingObject.communication *= 1;
+        ratingObject.cleanliness *= 1;
+        ratingObject.location *= 1;
+        ratingObject.checkin *= 1;
+        ratingObject.value *= 1;
+        return ratingObject;
+      }))
     })
     .catch((err) => {
       console.error(err);

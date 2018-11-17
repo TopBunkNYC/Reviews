@@ -2,7 +2,7 @@
 const knex = require('../database-pg/index.js')
 
 module.exports = {
-  getAllReviews: (listingId, callback) => {
+  getAllReviews: (listingId) => {
     return knex.raw(`SELECT *
     FROM bookings
     INNER JOIN reviews
@@ -11,15 +11,9 @@ module.exports = {
     ON (bookings.user_id = users.u_id)
     ORDER BY reviews.review_date DESC;
     `,(listingId)); 
-    // .then((response) => {
-    //   callback(response.rows);
-    // })
-    // .catch((err) => {
-    //   console.error(err);
-    // });
   },
 
-  getRatings: (listingId, callback) => {  // update
+  getRatings: (listingId) => {  // update
     return knex.raw(`SELECT 
       AVG(accuracy) AS accuracy, 
       AVG(communication) AS communication, 
@@ -29,19 +23,11 @@ module.exports = {
       AVG(value) AS value
       FROM reviews
       INNER JOIN bookings
-      ON (reviews.booking_id = bookings.b_id AND bookings.listing_id = ?)
-      INNER JOIN users
-      ON (bookings.user_id = users.u_id)
+      ON (reviews.booking_id = bookings.b_id AND bookings.listing_id = ?);
     `, (listingId));
-    // .then((response) => {
-    //   callback(response.rows);
-    // })
-    // .catch((err) => {
-    //   console.error(err);
-    // });
   },
 
-  getSearch: (listingId, query, callback) => {  // update
+  getSearch: (listingId, query) => {  // NOT WORKING
     return knex.raw(`SELECT *
       FROM reviews
       INNER JOIN Bookings
@@ -52,16 +38,10 @@ module.exports = {
       INNER JOIN Users
       ON (bookings.user_id = users.u_id)
       ORDER BY Reviews.review_date DESC;
-    `, (listingId, `"${query}"`));
-    // .then((response) => {
-    //   callback(response.rows);
-    // })
-    // .catch((err) => {
-    //   console.error(err);
-    // });
+    `, (listingId, `${query}`));
   },
 
-  postReview: (options, callback) => { // update
+  postReview: (options) => { // update
     let orderedOptions = [
       options.bookingId || Math.floor(Math.random() * 15000000),
       new Date().toISOString().slice(0,10),
@@ -80,36 +60,18 @@ module.exports = {
       VALUES
         (?, ?, ?, ?, ?, ?, ?, ?, ?)
     `, (orderedOptions));
-    // .then((response) => {
-    //   callback(response.rows);
-    // })
-    // .catch((err) => {
-    //   console.error(err);
-    // });
   },
 
   editReview: (reviewId, newReviewText, callback) => { // update
     return knex.raw(`
       UPDATE reviews SET review_text = ?
       WHERE r_id = ?;
-    `, [newReviewText, reviewId])
-    // .then((response) => {
-    //   callback(response.rows);
-    // })
-    // .catch((err) => {
-    //   console.error(err);
-    // });
+    `, [newReviewText, reviewId]);
   },
 
   deleteReview: (reviewId, callback) => { // update
     return knex.raw(`DELETE FROM reviews 
       WHERE r_id = ?
-    `, [reviewId])
-    // .then((response) => {
-    //   callback(response.rows);
-    // })
-    // .catch((err) => {
-    //   console.error(err);
-    // });
+    `, [reviewId]);
   }
 };
