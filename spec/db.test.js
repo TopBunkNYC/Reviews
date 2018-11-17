@@ -4,7 +4,7 @@ const Promise = require('bluebird');
 const now = require('performance-now');
 let knex;
 let mongoose;
-let loops = 2;
+let loops = 300;
 
 jest.setTimeout(60000);
 
@@ -45,7 +45,7 @@ describe('PostgreSQL database speed', () => {
     }
 
     let averageTime = totalTime / loops;
-    console.log('average time for Review queried on Review ID (key) is', averageTime);
+    console.log('average time for Review table queried on Review ID (key) is', averageTime);
     expect(averageTime).toBeLessThan(50);
   })
 
@@ -74,7 +74,7 @@ describe('PostgreSQL database speed', () => {
 
     let averageTime = totalTime / loops;
     await knex.raw(`DELETE FROM reviews where booking_id = -1`);
-    console.log('average time for write to Review table is', averageTime);
+    console.log('average write time for Review table is', averageTime);
     expect(averageTime).toBeLessThan(50);
   })
 
@@ -98,32 +98,17 @@ describe('PostgreSQL database speed', () => {
         ON (bookings.user_id = users.u_id)
         ORDER BY reviews.review_date DESC;
       `, (listingId))
-      .then((result) => {
+      .then(() => {
         endTime = now();
         totalTime += (endTime - startTime);
-        console.log('sample output for join data:', result.rows)
       })
       .catch((err) => { console.error(err); }) 
     }
 
     let averageTime = totalTime / loops;
-    console.log('average time for reads on joined relational data is', averageTime);
+    console.log('average read time for joined relational data is', averageTime);
     expect(averageTime).toBeLessThan(50);
-
-    /*
-    
-      SELECT *
-      FROM Reviews
-      INNER JOIN Bookings
-      ON Reviews.booking_id = Bookings.b_id
-      LEFT JOIN Users
-      ON Bookings.user_id = Users.u_id
-      WHERE Bookings.listing_id = ?
-      ORDER BY Reviews.review_date DESC;
-    
-    */
   })
-
 })
 
 describe('MongoDB database speed', () => {
