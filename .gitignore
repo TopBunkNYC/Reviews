@@ -13,3 +13,4 @@ package-lock.json
 build-database/photos/*
 newrelic_agent.log
 spec/sillyTest.js
+newrelic.js
