@@ -3,37 +3,11 @@ const mongoose = require('mongoose');
 const faker = require('faker');
 const moment = require('moment');
 
-var reviewSchema = new mongoose.Schema({
-  _id: {
-    type: Number,
-    unique: true,
-    index: true
-  },
-  review_date: Date,
-  review_text: String,
-  accuracy: Number,
-  communication: Number,
-  cleanliness: Number,
-  location: Number,
-  checkin: Number,
-  u_id: Number,
-  username: String,
-  display_name: String,
-  photo_url: String,
-  profile_url: String
-}, {autoIndex: false})
 
-var listingSchema = new mongoose.Schema({
-  _id: {
-    type: Number,
-    unique: true,
-    index: true
-  },
-  reviews: [reviewSchema]
-}, {autoIndex: false})
-
-var Listing = mongoose.model('listing', listingSchema);
-var Review = mongoose.model('Review', reviewSchema);
+// var Listing = mongoose.model('listing', listingSchema);
+// var Review = mongoose.model('Review', reviewSchema);
+const Listing = require('./schemas.js').ListingModel;
+const Review = require('./schemas.js').ReviewModel;
 
 const randomDate = (startDate = new Date(2015, 08, 01), endDate = new Date()) => {
   let rand = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
@@ -103,4 +77,5 @@ let endWrite;
   console.log('the number of reviews created is', reviewCounter - 1)  
 })()
 
+exports.ListingModel = Listing;
 
