@@ -11,6 +11,16 @@ module.exports = {
     })
   },
 
+  getReview: (req, res) => {
+    models.getReview(req.query.r_id)
+    .then((response) => {
+      res.send(response.rows)
+    })
+    .catch((err) => {
+      console.error(err);
+    })
+  },
+
   getRatings: (req, res) => {
     models.getRatings(req.query.id)
     .then((response) => {
@@ -50,7 +60,9 @@ module.exports = {
   },
 
   editReview: (req, res) => {
-    models.editReview(req.query.r_id, req.query.newReviewText)
+    console.log('req object', req)
+    console.log('VALUE OF r_id: ', req.body.r_id, '\nVALUE OF newReviewText: ', req.body.newReviewText);
+    models.editReview(req.body.r_id, req.body.newReviewText)
     .then((response) => {
       res.send(response.rows)
     })

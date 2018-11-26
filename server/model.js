@@ -13,6 +13,10 @@ module.exports = {
     `,(listingId)); 
   },
 
+  getReview: (reviewId) => {
+    return knex.raw(`SELECT * FROM reviews WHERE r_id = ?`, [reviewId]);
+  },
+
   getRatings: (listingId) => {  // update
     return knex.raw(`SELECT 
       AVG(accuracy) AS accuracy, 
@@ -62,14 +66,14 @@ module.exports = {
     `, (orderedOptions));
   },
 
-  editReview: (reviewId, newReviewText, callback) => { // update
+  editReview: (reviewId, newReviewText) => {
     return knex.raw(`
       UPDATE reviews SET review_text = ?
       WHERE r_id = ?;
     `, [newReviewText, reviewId]);
   },
 
-  deleteReview: (reviewId, callback) => { // update
+  deleteReview: (reviewId) => {
     return knex.raw(`DELETE FROM reviews 
       WHERE r_id = ?
     `, [reviewId]);
