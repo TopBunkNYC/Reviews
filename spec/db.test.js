@@ -4,7 +4,7 @@ let knex;
 let mongoose;
 let loops = 500;
 
-jest.setTimeout(90000);
+jest.setTimeout(60000);
 
 describe('PostgreSQL database speed', () => {
   beforeAll(() => {
