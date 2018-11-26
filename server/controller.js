@@ -72,7 +72,7 @@ module.exports = {
   },
 
   deleteReview: (req, res) => {
-    models.deleteReview(req.query.r_id)
+    models.deleteReview(req.query.booking_id)
     .then((response) => {
       res.send(response.rows)
     })

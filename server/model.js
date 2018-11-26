@@ -73,9 +73,9 @@ module.exports = {
     `, [newReviewText, reviewId]);
   },
 
-  deleteReview: (reviewId) => {
+  deleteReview: (booking_id) => {
     return knex.raw(`DELETE FROM reviews 
-      WHERE r_id = ?
-    `, [reviewId]);
+      WHERE booking_id = ?
+    `, [booking_id]);
   }
 };

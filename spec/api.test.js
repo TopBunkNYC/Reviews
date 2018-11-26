@@ -84,4 +84,37 @@ describe('API functionality', () => {
       .catch((err) => console.error(err))
     )
   })
+
+  test('deletes a review', async () => {
+    await axios.post('http://localhost:8001/reviews', {
+      "bookingId": -1,
+      "reviewText": "This is just a test! I did not stay here.",
+      "accuracy": 5,
+      "communication": 4,
+      "cleanliness": 5,
+      "location": 4,
+      "checkin": 5, 
+      "value": 4
+    })
+    .then(async () => {
+      return knex.select().table('reviews').where('booking_id', -1)
+      .then((result) => {
+        expect(result[0].review_text).toBe('This is just a test! I did not stay here.');
+      })
+      .then(() => {
+        return axios.delete('http://localhost:8001/reviews', {
+          params: {
+            booking_id: -1
+          }
+        })
+        .then(() => {
+          return knex.select().table('reviews').where('booking_id', -1)
+          .then((result) => {
+            expect(result.length).toBe(0);
+          })
+        })
+      })
+      .catch(err => console.error(err))
+    })
+  })
 })
