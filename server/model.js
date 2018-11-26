@@ -27,7 +27,7 @@ module.exports = {
     `, (listingId));
   },
 
-  getSearch: (listingId, query) => {  // NOT WORKING
+  getSearch: (listingId, queryString) => {
     return knex.raw(`SELECT *
       FROM reviews
       INNER JOIN Bookings
@@ -38,7 +38,7 @@ module.exports = {
       INNER JOIN Users
       ON (bookings.user_id = users.u_id)
       ORDER BY Reviews.review_date DESC;
-    `, (listingId, `${query}`));
+    `, [listingId, `${queryString}`]);
   },
 
   postReview: (options) => { // update
