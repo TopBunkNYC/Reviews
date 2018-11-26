@@ -5,6 +5,7 @@ const controller = require('./controller.js');
 const router = express.Router();
 
 router.get('/reviews', controller.getAllReviews);
+router.get('/review', controller.getReview);
 router.get('/ratings', controller.getRatings);
 router.get('/search', controller.getSearch);
 

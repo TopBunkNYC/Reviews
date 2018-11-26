@@ -13,6 +13,10 @@ module.exports = {
     `,(listingId)); 
   },
 
+  getReview: (reviewId) => {
+    return knex.raw(`SELECT * FROM reviews WHERE r_id = ?`, [reviewId]);
+  },
+
   getRatings: (listingId) => {  // update
     return knex.raw(`SELECT 
       AVG(accuracy) AS accuracy, 
@@ -27,7 +31,7 @@ module.exports = {
     `, (listingId));
   },
 
-  getSearch: (listingId, query) => {  // NOT WORKING
+  getSearch: (listingId, queryString) => {
     return knex.raw(`SELECT *
       FROM reviews
       INNER JOIN Bookings
@@ -38,7 +42,7 @@ module.exports = {
       INNER JOIN Users
       ON (bookings.user_id = users.u_id)
       ORDER BY Reviews.review_date DESC;
-    `, (listingId, `${query}`));
+    `, [listingId, `${queryString}`]);
   },
 
   postReview: (options) => { // update
@@ -62,16 +66,16 @@ module.exports = {
     `, (orderedOptions));
   },
 
-  editReview: (reviewId, newReviewText, callback) => { // update
+  editReview: (reviewId, newReviewText) => {
     return knex.raw(`
       UPDATE reviews SET review_text = ?
       WHERE r_id = ?;
     `, [newReviewText, reviewId]);
   },
 
-  deleteReview: (reviewId, callback) => { // update
+  deleteReview: (booking_id) => {
     return knex.raw(`DELETE FROM reviews 
-      WHERE r_id = ?
-    `, [reviewId]);
+      WHERE booking_id = ?
+    `, [booking_id]);
   }
 };
