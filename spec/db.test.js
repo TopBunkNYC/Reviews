@@ -1,6 +1,4 @@
-const _ = require('lodash');
 const Promise = require('bluebird');
-
 const now = require('performance-now');
 let knex;
 let mongoose;
@@ -192,5 +190,3 @@ describe('MongoDB database speed', () => {
     })
   })
 })
-
-

@@ -3,9 +3,6 @@ const mongoose = require('mongoose');
 const faker = require('faker');
 const moment = require('moment');
 
-
-// var Listing = mongoose.model('listing', listingSchema);
-// var Review = mongoose.model('Review', reviewSchema);
 const Listing = require('./schemas.js').ListingModel;
 const Review = require('./schemas.js').ReviewModel;
 
