@@ -27,7 +27,7 @@ export default class Reviews extends React.Component {
 
   getAllReviews() {
     let queryString = window.location.search;
-    let listingID = (queryString.slice(-3) * 1);
+    let listingID = (queryString.slice(4) * 1);
     let params = {
       params: {
         id: listingID
@@ -47,7 +47,7 @@ export default class Reviews extends React.Component {
 
   searchReviews(query) {
     let queryString = window.location.search;
-    let listingID = (queryString.slice(-3) * 1);
+    let listingID = (queryString.slice(4) * 1);
     let params = {
       params: {
         id: listingID,
@@ -69,7 +69,8 @@ export default class Reviews extends React.Component {
 
   getRatings() {
     let queryString = window.location.search;
-    let listingID = (queryString.slice(-3) * 1);
+    console.log('queryString: ', queryString)
+    let listingID = (queryString.slice(4) * 1);
     let params = {
       params: {
         id: listingID,
