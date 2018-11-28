@@ -3,6 +3,9 @@ const knex = require('../database-pg/index.js')
 
 module.exports = {
   getAllReviews: (listingId) => {
+    if (listingId > 1000000) {
+      listingId = (listingId % 1000000) + 1;
+    }
     return knex.raw(`SELECT *
     FROM bookings
     INNER JOIN reviews
@@ -17,7 +20,10 @@ module.exports = {
     return knex.raw(`SELECT * FROM reviews WHERE r_id = ?`, [reviewId]);
   },
 
-  getRatings: (listingId) => {  // update
+  getRatings: (listingId) => {
+    if (listingId > 1000000) {
+      listingId = (listingId % 1000000) + 1;
+    }
     return knex.raw(`SELECT 
       AVG(accuracy) AS accuracy, 
       AVG(communication) AS communication, 
@@ -32,6 +38,9 @@ module.exports = {
   },
 
   getSearch: (listingId, queryString) => {
+    if (listingId > 1000000) {
+      listingId = (listingId % 1000000) + 1;
+    }
     return knex.raw(`SELECT *
       FROM reviews
       INNER JOIN Bookings

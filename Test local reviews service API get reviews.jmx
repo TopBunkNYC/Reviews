@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test local reviews service API get reviews" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test local reviews service" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
@@ -102,7 +102,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/dweinzimmer/Documents/Coding/HackReactor_Course/Reviews/performance/Test local reviews service API GET_graph.csv</stringProp>
+        <stringProp name="filename">/Users/dweinzimmer/Documents/Coding/HackReactor_Course/Reviews/performance/Test local reviews service_graph.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
@@ -139,7 +139,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/dweinzimmer/Documents/Coding/HackReactor_Course/Reviews/performance/Test local reviews service API GET.csv</stringProp>
+        <stringProp name="filename">/Users/dweinzimmer/Documents/Coding/HackReactor_Course/Reviews/performance/Test local reviews service.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
@@ -213,7 +213,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/dweinzimmer/Documents/Coding/HackReactor_Course/Reviews/performance/Test local reviews service_summary API GET.csv</stringProp>
+        <stringProp name="filename">/Users/dweinzimmer/Documents/Coding/HackReactor_Course/Reviews/performance/Test local reviews service_summary.csv</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
