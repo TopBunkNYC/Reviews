@@ -86,8 +86,18 @@ router.get('/listings', async (req, res) => {
     `);
   })
   .catch((err) => { console.error(err); })
-})
+});
 
+router.get('/renderReviews', (req, res) => {
+  ssr(req.query.id)
+		.then((results) => {
+			res.send(results);
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).send();
+		});
+});
 
 router.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '/../client/dist/index.html'));
