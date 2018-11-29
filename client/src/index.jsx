@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 import Search from './components/Search.jsx';
@@ -10,10 +9,10 @@ class Reviews extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reviews: props.reviews || [],
-      search: props.search || [],
-      ratings: props.ratings || [],
-      showSearch: false
+      reviews: props.initialState.reviews || [],
+      search: props.initialState.search || [],
+      ratings: props.initialState.ratings || [],
+      showSearch: props.initialState.showSearch || false
     }
     this.getAllReviews = this.getAllReviews.bind(this);
     this.searchReviews = this.searchReviews.bind(this);

@@ -14,3 +14,4 @@ build-database/photos/*
 newrelic_agent.log
 spec/sillyTest.js
 newrelic.js
+client/dist/review-bundle-server.js

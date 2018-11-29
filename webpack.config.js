@@ -23,8 +23,6 @@ const DIST_DIR = path.join(__dirname, '/client/dist');
   }
 };
 
-// module.exports = client; // delete
-
 const server = {
   entry: `${SRC_DIR}/server.jsx`,
   target: 'node',
