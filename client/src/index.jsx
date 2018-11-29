@@ -9,10 +9,10 @@ class Reviews extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reviews: props.initialState.reviews || [],
-      search: props.initialState.search || [],
-      ratings: props.initialState.ratings || [],
-      showSearch: props.initialState.showSearch || false
+      reviews: props.reviews || [],
+      search: props.search || [],
+      ratings: props.ratings || [],
+      showSearch: props.showSearch || false
     }
     this.getAllReviews = this.getAllReviews.bind(this);
     this.searchReviews = this.searchReviews.bind(this);
@@ -91,7 +91,7 @@ class Reviews extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Search searchReviews={this.searchReviews} ratings={this.state.ratings} reviews={this.state.reviews}/>
         <Stars ratings={this.state.ratings}/>
         <ReviewList reviews={this.state.showSearch ? this.state.search : this.state.reviews}/>

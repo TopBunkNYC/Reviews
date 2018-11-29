@@ -6,8 +6,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       reviews: this.props.reviews,
-      search: [],
       ratings: this.props.ratings,
+      search: [],
       showSearch: false
     }
   }
@@ -15,7 +15,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Reviews initialState={this.state}/>
+        <Reviews 
+          reviews={this.state.reviews} 
+          ratings={this.state.ratings} 
+          search={this.state.search} 
+          showSearch={this.state.showSearch}
+        />
       </div>
     )
   }

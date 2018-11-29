@@ -53,7 +53,7 @@ export default class ReviewItem extends React.Component {
             {this.props.review.review_date.substring(0, 10)}
           </span>
           <span className="reviewItemHeaderFlag">
-            <a href='/'><img src="http://imgur.com/8ELuIV8.png" className="reviewItemHeaderFlagImg" onClick={this.showAlert}/></a>
+            <a href='/'><img src="https://s3.us-east-2.amazonaws.com/topbunk-profilephotos/flag.png" className="reviewItemHeaderFlagImg" onClick={this.showAlert}/></a>
           </span>
         </div>
         {renderText}
