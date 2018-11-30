@@ -74,7 +74,7 @@ router.get('/listings', async (req, res) => {
           <div id="reviews">${results[0]}</div>
           <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
           <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-          <script type="text/javascript" src="/bundle.js"></script>
+          <script crossorigin src="https://s3.us-east-2.amazonaws.com/topbunk-profilephotos/client-bundle.js"></script>
           <script>
             ReactDOM.hydrate(
               React.createElement(Reviews, ${results[1]}),
