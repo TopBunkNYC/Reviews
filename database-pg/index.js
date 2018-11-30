@@ -1,12 +1,14 @@
 const pg = require('pg');
-const config = require('../config.js').pgDbConfig;
+const configUser = process.env.dbUser || require('../config.js').pgDbConfig.user;
+const configPassword = process.env.dbPassword || require('../config.js').pgDbConfig.password;
 const knex = require('knex');
 
 const connection = knex({
   client: 'pg',
   connection: {
-    user: config.user,
-    password: config.password,
+    host: '18.221.51.166',
+    user: configUser,
+    password: configPassword,
     database: 'topbunk'
   }
 });

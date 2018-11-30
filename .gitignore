@@ -15,3 +15,5 @@ newrelic_agent.log
 spec/sillyTest.js
 newrelic.js
 client/dist/review-bundle-server.js
+dockerenv.txt
+snippets.txt
