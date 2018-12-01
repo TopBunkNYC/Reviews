@@ -19,7 +19,7 @@ router.delete('/reviews', controller.deleteReview);
 
 const ssr = (id) => {
   let props;
-  let html;
+  let ssr_html;
 
   return Promise.all([
     // 0: reviews
@@ -50,8 +50,8 @@ const ssr = (id) => {
       }
     })
     let component = React.createElement(application, props);
-    html = ReactDOMServer.renderToString(component);
-    return [html, JSON.stringify(props)];
+    ssr_html = ReactDOMServer.renderToString(component);
+    return {ssr_html, props: JSON.stringify(props)};
   })
   .catch((err) => { 
     console.error(err); 
@@ -71,13 +71,13 @@ router.get('/listings', async (req, res) => {
           <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         </head>
         <body>
-          <div id="reviews">${results[0]}</div>
+          <div id="reviews">${results.ssr_html}</div>
           <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
           <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
           <script crossorigin src="https://s3.us-east-2.amazonaws.com/topbunk-profilephotos/client-bundle.js"></script>
           <script>
             ReactDOM.hydrate(
-              React.createElement(Reviews, ${results[1]}),
+              React.createElement(Reviews, ${results.props}),
               document.getElementById('reviews')
             );
           </script>
