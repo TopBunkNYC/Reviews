@@ -2,7 +2,7 @@ require('newrelic');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const cors = require('cors');
+const compression = require('compression');
 const port = process.env.PORT || 8001;
 
 // const db = require('../database-mysql/index.js');
@@ -13,7 +13,9 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+if (process.env.useCompression === 'true') {
+  app.use(compression());
+} 
 app.all('/*', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   next();
