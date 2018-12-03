@@ -5,9 +5,13 @@ const model = require('./model.js');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 const application = require('../client/dist/review-bundle-server.js').default;
+const loaderIO = process.env.loaderIO || require('../config.js').loaderIO;
 
 const router = express.Router();
 
+router.get(`/${loaderIO}`, (req, res) => {
+  res.send(`${loaderIO}`);
+})
 router.get('/reviews', controller.getAllReviews);
 router.get('/review', controller.getReview);
 router.get('/ratings', controller.getRatings);
@@ -51,7 +55,8 @@ const ssr = (id) => {
     })
     let component = React.createElement(application, props);
     ssr_html = ReactDOMServer.renderToString(component);
-    return {ssr_html, props: JSON.stringify(props)};
+    let stringProps = JSON.stringify(props);
+    return {ssr_html, props: stringProps};
   })
   .catch((err) => { 
     console.error(err); 
