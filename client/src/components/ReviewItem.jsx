@@ -35,7 +35,7 @@ export default class ReviewItem extends React.Component {
 
   showAlert(event) {
     event.preventDefault();
-    alert('Thank you for flagging this review! This is not how the real AirBnB page does this, but that would have been too complicated given our numerous components. Thank you for understanding.');
+    alert('Thank you for flagging this review! Our Trust & Safety team will take a look as soon as possible, and will follow up with you if more detail is needed.');
   }
 
   render() {
