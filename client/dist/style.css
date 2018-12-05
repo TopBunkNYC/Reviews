@@ -42,8 +42,17 @@ h2 {
   vertical-align: middle;
 }
 
+#sectionTitle {
+  width: 40%;
+}
+
+#listingOverallStars {
+  margin-left: 40%;
+}
+
 .searchBarDiv {
   float: right;
+  margin-left: 50%;
   width: 300px;
   height: auto;
   vertical-align: middle;
@@ -59,7 +68,8 @@ h2 {
 
 .searchBar {
   width: 90%;
-  float: right;
+  /* float: right; */
+  margin-left: 15px;
   height: 30px;
   vertical-align: middle;
   font-size: 14px;
@@ -67,7 +77,6 @@ h2 {
   font-family: 'Roboto', sans-serif;
   color: #484848;
   font-weight: 600;
-  float: right;
   border-width: 0px;
 }
 

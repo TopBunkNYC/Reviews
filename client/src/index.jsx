@@ -1,19 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 import Search from './components/Search.jsx';
 import Stars from './components/Stars.jsx';
 import ReviewList from './components/ReviewList.jsx';
 
-export default class Reviews extends React.Component {
+class Reviews extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reviews: [],
-      search: [],
-      ratings: [],
-      showSearch: false
+      reviews: props.reviews || [],
+      search: props.search || [],
+      ratings: props.ratings || [],
+      showSearch: props.showSearch || false
     }
     this.getAllReviews = this.getAllReviews.bind(this);
     this.searchReviews = this.searchReviews.bind(this);
@@ -92,7 +91,7 @@ export default class Reviews extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Search searchReviews={this.searchReviews} ratings={this.state.ratings} reviews={this.state.reviews}/>
         <Stars ratings={this.state.ratings}/>
         <ReviewList reviews={this.state.showSearch ? this.state.search : this.state.reviews}/>
@@ -101,4 +100,4 @@ export default class Reviews extends React.Component {
   }
 };
 
-ReactDOM.render(<Reviews />, document.getElementById("reviews"));
+export default Reviews;

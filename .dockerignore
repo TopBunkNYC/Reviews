@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+topbunk-reviews-key.pem
+config.js
+build-database/data-bookings.csv
+build-database/data-listings.csv
+build-database/data-reviews.csv
+build-database/data-users.csv
+dockerenv.txt
+build-database/photos/*
+*.jmx
+snippets.txt

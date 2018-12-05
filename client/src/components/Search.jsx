@@ -4,12 +4,31 @@ import StarsModel from './StarsModel.jsx';
 export default class Search extends React.Component {
   constructor(props) {
     super(props);
+
+    let averageRatings = 0;
+    let starsLoaded = false;
+    if (props.ratings.length > 0) {
+      let sum = 0;
+      let obj = props.ratings[0];
+      for (var key in obj) {
+        sum += (obj[key] * 1)
+      }
+      averageRatings = sum / 6;
+      starsLoaded = true;
+    }
+    let totalRatings = 0;
+    let ratingsLoaded = false;
+    if (props.reviews.length > 0) {
+      totalRatings = props.reviews.length;
+      ratingsLoaded = true;
+    }
+
     this.state = {
       query: '',
-      starsLoaded: false,
-      avgRating: 0,
-      ratingsLoaded: false,
-      totalRatings: 0
+      starsLoaded: starsLoaded,
+      avgRating:  averageRatings,
+      ratingsLoaded: ratingsLoaded,
+      totalRatings: totalRatings
     }
     this.searchQuery = this.searchQuery.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
@@ -61,11 +80,11 @@ export default class Search extends React.Component {
   render() {
     return (
       <div className="searchContainer">
-        <span className="totalReviewsDiv">
-          <h2>{this.state.ratingsLoaded ? this.state.totalRatings : 0} Reviews<StarsModel rating={this.state.starsLoaded ? this.state.avgRating : 0} dimensions='25px'/></h2>
-        </span>
-        <span className="searchBarDiv">
-          <img src="http://imgur.com/npblqeD.png" className="magnifyImg"/>
+        <div className="totalReviewsDiv">
+          <h2 id="sectionTitle">{this.state.totalRatings} Reviews <StarsModel id="listingOverallStars" rating={this.state.avgRating} dimensions='25px'/></h2>
+        </div>
+        <div className="searchBarDiv">
+          <img src="https://s3.us-east-2.amazonaws.com/topbunk-profilephotos/search.png" className="magnifyImg"/>
           <input
             className="searchBar"
             type="search"
@@ -74,7 +93,7 @@ export default class Search extends React.Component {
             value={this.state.query}
             onKeyPress={this.handleKeyPress}
           ></input>
-        </span>
+        </div>
       </div>
     )
   }
