@@ -25,10 +25,10 @@ export default class Search extends React.Component {
 
     this.state = {
       query: '',
-      starsLoaded: starsLoaded || false,
-      avgRating:  averageRatings || 0,
-      ratingsLoaded: ratingsLoaded || false,
-      totalRatings: totalRatings || 0
+      starsLoaded: starsLoaded,
+      avgRating:  averageRatings,
+      ratingsLoaded: ratingsLoaded,
+      totalRatings: totalRatings
     }
     this.searchQuery = this.searchQuery.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
