@@ -1,6 +1,11 @@
 # Reviews
-This is the "Reviews" module in our TopBunk web application.
+This is the "Reviews" module in our TopBunk web application. To visit the deployed service, go [here](http://18.218.35.42/listings?id=92921). 
 
+<img src="https://github.com/TopBunk/Reviews/blob/master/demo_gif_1.gif" width="65%" height="65%">
+
+<img src="https://github.com/TopBunk/Reviews/blob/master/demo_gif_2.gif" width="65%" height="65%">
+
+The images above provide a tour of the deployed proxy server, which brings together the description, booking, reviews, and about-the-neighborhood services into a unified application. You can find the proxy server's Github page [here](https://github.com/TopBunkNYC/Proxy_David).
 
 ## Related Projects
 
@@ -8,7 +13,7 @@ This is the "Reviews" module in our TopBunk web application.
   - https://github.com/TopBunkNYC/Booking
   - https://github.com/TopBunkNYC/Neighborhood 
 
-### Installing Dependencies
+## Installing Dependencies
 
 From within the root directory:
 
@@ -16,7 +21,7 @@ From within the root directory:
 npm install
 ```
 
-## Development
+### Running the application
 To run the application in non-development mode from within the root directory: 
 ```sh
 # Create CSV files of the four database files. 
