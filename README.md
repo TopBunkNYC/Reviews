@@ -1,11 +1,11 @@
 # Reviews
-This is the "Reviews" module in our TopBunk web application. To visit the deployed service, go [here](http://18.218.35.42/listings?id=92921). 
+This is the "Reviews" module in our TopBunk web application. To visit the deployed service, go **[here](http://18.218.35.42/listings?id=92921)**. 
+
+The images below provide a tour of the deployed proxy server, which brings together the description, booking, reviews, and about-the-neighborhood services into a unified application. You can find the proxy server's Github page [here](https://github.com/TopBunkNYC/Proxy_David).
 
 <img src="https://github.com/TopBunkNYC/Reviews/blob/master/demo_gif_1.gif" width="65%" height="65%">
 
 <img src="https://github.com/TopBunkNYC/Reviews/blob/master/demo_gif_2.gif" width="65%" height="65%">
-
-The images above provide a tour of the deployed proxy server, which brings together the description, booking, reviews, and about-the-neighborhood services into a unified application. You can find the proxy server's Github page [here](https://github.com/TopBunkNYC/Proxy_David).
 
 ## Related Projects
 
