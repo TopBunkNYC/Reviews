@@ -17,3 +17,7 @@ newrelic.js
 client/dist/review-bundle-server.js
 dockerenv.txt
 snippets.txt
+Test local reviews service API get reviews.jmx
+Test local reviews service.jmx
+database-mysql/*
+database-mongo/*
