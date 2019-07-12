@@ -11,10 +11,6 @@ const connection = knex({
     user: configUser,
     password: configPassword,
     database: 'topbunk'
-  },
-  pool: {
-    min: 2,
-    max: 10
   }
 });
 

@@ -1,5 +1,5 @@
 // const db = require('../database-mysql/index.js');
-const knex = require('../database-pg/index.js')
+const knex = require('../database-pg/index.js');
 
 module.exports = {
   getAllReviews: (listingId) => {
